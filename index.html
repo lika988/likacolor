@@ -2,7 +2,8 @@
 <html lang="sq" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ndalon zoom-in në pajisjet mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>LIKAcolor | Shërbime Profesionale të Ngjyrosjes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -51,7 +52,8 @@
         }
     </script>
     <style>
-        html, body { overflow-x: hidden; }
+        /* Ndalon klikimin e dyfishte qe shkakton zoom (si aplikacion) */
+        html, body { overflow-x: hidden; touch-action: manipulation; }
         body { transition: background-color 0.3s ease, color 0.3s ease; }
         
         .bg-hero {
@@ -141,26 +143,26 @@
 <body class="font-sans text-slate-800 dark:text-slate-200 bg-slate-50 dark:bg-slate-900 antialiased selection:bg-accent selection:text-white transition-colors duration-300">
 
     <!-- Butoni WhatsApp -->
-    <a href="https://wa.me/38349585195" target="_blank" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 bg-[#25D366] text-white p-3 sm:p-4 rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.4)] hover:scale-110 hover:-translate-y-1 transition-all duration-300 group flex items-center justify-center">
-        <i data-lucide="message-circle" class="w-6 h-6 sm:w-7 sm:h-7"></i>
-        <span class="absolute right-14 sm:right-16 bg-white dark:bg-slate-800 text-slate-800 dark:text-white text-xs sm:text-sm font-bold px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity shadow-lg whitespace-nowrap pointer-events-none">Na kontaktoni</span>
+    <a href="https://wa.me/38349585195" target="_blank" class="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.4)] hover:scale-110 hover:-translate-y-1 transition-all duration-300 group flex items-center justify-center">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+        <span class="absolute right-16 bg-white dark:bg-slate-800 text-slate-800 dark:text-white text-sm font-bold px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity shadow-lg whitespace-nowrap pointer-events-none">Na kontaktoni</span>
     </a>
 
     <!-- Navigimi -->
     <nav class="fixed w-full z-40 bg-white/80 dark:bg-slate-900/80 glass-panel shadow-sm border-b border-slate-200/50 dark:border-slate-800/50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 sm:h-24">
+            <div class="flex justify-between items-center h-20 sm:h-24">
                 
                 <!-- Logo me Numër Telefonit -->
-                <div class="flex-shrink-0 flex items-center cursor-pointer group gap-2.5 sm:gap-3.5" onclick="window.scrollTo(0,0)">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-tr from-accent to-orange-400 rounded-xl sm:rounded-[1.1rem] flex items-center justify-center shadow-lg group-hover:shadow-glow group-hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                <div class="flex-shrink-0 flex items-center cursor-pointer group gap-3.5" onclick="window.scrollTo(0,0)">
+                    <div class="w-12 h-12 bg-gradient-to-tr from-accent to-orange-400 rounded-[1.1rem] flex items-center justify-center shadow-lg group-hover:shadow-glow group-hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
                         <div class="absolute inset-0 bg-white/30 group-hover:translate-x-full transition-transform duration-700 -skew-x-12 -translate-x-full"></div>
-                        <i data-lucide="paint-roller" class="text-slate-900 w-5 h-5 sm:w-6 sm:h-6 relative z-10"></i>
+                        <i data-lucide="paint-roller" class="text-slate-900 w-6 h-6 relative z-10"></i>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-xl sm:text-3xl font-black text-primary dark:text-white tracking-tight leading-none mb-0.5 sm:mb-1">LIKA<span class="text-accent">color</span></span>
-                        <a href="tel:+38349585195" class="text-[10px] sm:text-[13px] font-bold text-slate-500 dark:text-slate-400 flex items-center gap-1 sm:gap-1.5 group-hover:text-accent transition-colors">
-                            <i data-lucide="phone" class="w-3 h-3 sm:w-3.5 sm:h-3.5"></i> +383 49 585 195
+                        <span class="text-2xl sm:text-3xl font-black text-primary dark:text-white tracking-tight leading-none mb-1">LIKA<span class="text-accent">color</span></span>
+                        <a href="tel:+38349585195" class="text-[11px] sm:text-[13px] font-bold text-slate-500 dark:text-slate-400 flex items-center gap-1.5 group-hover:text-accent transition-colors">
+                            <i data-lucide="phone" class="w-3.5 h-3.5"></i> +383 49 585 195
                         </a>
                     </div>
                 </div>
@@ -181,12 +183,12 @@
                     </a>
                 </div>
 
-                <div class="lg:hidden flex items-center gap-2">
-                    <button onclick="toggleDarkMode()" class="p-1.5 sm:p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                <div class="lg:hidden flex items-center gap-3">
+                    <button onclick="toggleDarkMode()" class="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
                         <i data-lucide="moon" id="themeIconMobile" class="w-5 h-5"></i>
                     </button>
-                    <button id="mobileMenuBtn" class="text-primary dark:text-white p-1.5 sm:p-2 bg-slate-100 dark:bg-slate-800 rounded-lg sm:rounded-xl">
-                        <i data-lucide="menu" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                    <button id="mobileMenuBtn" class="text-primary dark:text-white p-2 bg-slate-100 dark:bg-slate-800 rounded-xl">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
                 </div>
             </div>
@@ -194,22 +196,22 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="fixed inset-0 z-50 bg-primary/95 dark:bg-slate-900/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col pt-20 px-6 pb-8">
-        <button id="closeMenuBtn" class="absolute top-6 right-6 text-white p-2 bg-white/10 rounded-full">
-            <i data-lucide="x" class="w-5 h-5"></i>
+    <div id="mobileMenu" class="fixed inset-0 z-50 bg-primary/95 dark:bg-slate-900/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col pt-24 px-8 pb-8">
+        <button id="closeMenuBtn" class="absolute top-8 right-8 text-white p-2 bg-white/10 rounded-full">
+            <i data-lucide="x" class="w-6 h-6"></i>
         </button>
-        <div class="flex flex-col space-y-5 mt-6">
-            <a href="#home" class="mobile-link text-white text-2xl font-extrabold border-b border-white/10 pb-3">Ballina</a>
-            <a href="#services" class="mobile-link text-white text-2xl font-extrabold border-b border-white/10 pb-3">Shërbimet</a>
-            <a href="#calculator" class="mobile-link text-white text-2xl font-extrabold border-b border-white/10 pb-3">Kalkulatori i Çmimeve</a>
-            <a href="https://wa.me/38349585195" class="bg-gradient-to-r from-accent to-orange-400 text-slate-900 text-center mt-6 px-5 py-3 rounded-xl text-base font-bold shadow-glow flex justify-center items-center gap-2">
+        <div class="flex flex-col space-y-6 mt-8">
+            <a href="#home" class="mobile-link text-white text-3xl font-extrabold border-b border-white/10 pb-4">Ballina</a>
+            <a href="#services" class="mobile-link text-white text-3xl font-extrabold border-b border-white/10 pb-4">Shërbimet</a>
+            <a href="#calculator" class="mobile-link text-white text-3xl font-extrabold border-b border-white/10 pb-4">Kalkulatori i Çmimeve</a>
+            <a href="https://wa.me/38349585195" class="bg-gradient-to-r from-accent to-orange-400 text-slate-900 text-center mt-8 px-6 py-4 rounded-2xl text-lg font-bold shadow-glow flex justify-center items-center gap-2">
                 Na Kontaktoni <i data-lucide="message-circle" class="w-5 h-5"></i>
             </a>
         </div>
     </div>
 
     <!-- Seksioni Ballina -->
-    <section id="home" class="bg-hero min-h-screen flex items-center relative pt-20 sm:pt-24 overflow-hidden">
+    <section id="home" class="bg-hero min-h-screen flex items-center relative pt-24 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
         
         <!-- Animated Background Blobs -->
@@ -218,28 +220,28 @@
         <div class="absolute -bottom-32 left-1/2 w-96 h-96 bg-blue-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000 z-0"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full animate-fade-up">
-            <div class="max-w-4xl mt-10 sm:mt-0">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-semibold mb-6 sm:mb-8 shadow-lg">
-                    <span class="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
+            <div class="max-w-4xl">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-semibold mb-8 shadow-lg">
+                    <span class="relative flex h-2.5 w-2.5">
                       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-accent"></span>
+                      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent"></span>
                     </span>
                     Shërbime Profesionale & Transparencë
                 </div>
                 <!-- Titulli me animacion shkrimi -->
-                <h1 class="text-4xl sm:text-6xl md:text-8xl font-black mb-6 sm:mb-8 leading-[1.1] text-white tracking-tight min-h-[100px] sm:min-h-[120px] md:min-h-[200px]">
+                <h1 class="text-5xl sm:text-6xl md:text-8xl font-black mb-8 leading-[1.1] text-white tracking-tight min-h-[120px] md:min-h-[200px]">
                     Ndërroje pamjen <br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent via-yellow-400 to-orange-500 drop-shadow-lg" id="typewriter"></span><span class="text-accent cursor-blink font-light">|</span>
                 </h1>
                 
-                <p class="text-base sm:text-lg md:text-2xl mb-8 sm:mb-12 text-slate-300 font-medium max-w-2xl leading-relaxed">
-                    Shërbime të lyerjes të realizuara me saktësi dhe përkushtim në çdo fazë të punës. Synojmë përfundim të pastër, estetik dhe afatgjatë, duke respektuar hapësirën tuaj gjatë gjithë procesit.
+                <p class="text-lg md:text-2xl mb-12 text-slate-300 font-medium max-w-2xl leading-relaxed">
+                    Shërbime të lyerjes të realizuara me saktësi dhe përkushtim në çdo fazë të punës. Synojmë përfundim të pastër, estetik dhe afatgjatë, duke respektuar hapësirën tuaj gjatë gjithë procesit. Ju ofrojmë zgjedhje fleksibile, qoftë me materialet tona të përzgjedhura ose vetëm shërbimin e punës së dorës.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-3 sm:gap-6">
-                    <a href="#calculator" class="bg-gradient-to-r from-accent to-orange-400 hover:from-orange-400 hover:to-accent text-slate-900 font-extrabold py-3 px-6 sm:py-4 sm:px-8 rounded-full transition-all shadow-glow flex items-center justify-center gap-2 text-base sm:text-lg hover:scale-105">
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                    <a href="#calculator" class="bg-gradient-to-r from-accent to-orange-400 hover:from-orange-400 hover:to-accent text-slate-900 font-extrabold py-4 px-8 rounded-full transition-all shadow-glow flex items-center justify-center gap-2 text-lg hover:scale-105">
                         Llogarite Koston <i data-lucide="calculator" class="w-5 h-5"></i>
                     </a>
-                    <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-full transition-all flex items-center justify-center gap-2 text-base sm:text-lg hover:scale-105">
+                    <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold py-4 px-8 rounded-full transition-all flex items-center justify-center gap-2 text-lg hover:scale-105">
                         Kqyr Shërbimet
                     </a>
                 </div>
@@ -248,107 +250,107 @@
     </section>
 
     <!-- Seksioni Shërbimet Profesionale -->
-    <section id="services" class="py-16 sm:py-32 bg-slate-50 dark:bg-slate-900 relative transition-colors duration-300">
+    <section id="services" class="py-24 sm:py-32 bg-slate-50 dark:bg-slate-900 relative transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-10 sm:mb-24 reveal">
-                <span class="text-accent font-black tracking-widest uppercase text-xs sm:text-sm mb-2 sm:mb-3 block">Ekspertiza Jonë</span>
-                <h2 class="text-3xl md:text-5xl font-extrabold text-primary dark:text-white mb-4 sm:mb-6 tracking-tight">Shërbimet Që i Ofrojmë</h2>
-                <div class="w-16 sm:w-24 h-1.5 bg-gradient-to-r from-accent to-orange-400 mx-auto rounded-full"></div>
+            <div class="text-center mb-16 sm:mb-24 reveal">
+                <span class="text-accent font-black tracking-widest uppercase text-sm mb-3 block">Ekspertiza Jonë</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-primary dark:text-white mb-6 tracking-tight">Shërbimet Që i Ofrojmë</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-accent to-orange-400 mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Service 1 -->
-                <div class="reveal delay-100 bg-white dark:bg-slate-800 rounded-[1.5rem] sm:rounded-[2rem] shadow-xl overflow-hidden group border border-slate-100 dark:border-slate-700 hover:-translate-y-2 sm:hover:-translate-y-3 transition-all duration-500 flex flex-col relative hover:shadow-2xl hover:shadow-accent/10">
-                    <div class="absolute top-4 right-4 sm:top-5 sm:right-5 bg-accent text-slate-900 text-[10px] sm:text-xs font-black px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg sm:rounded-xl z-20 shadow-lg uppercase tracking-wider">
+                <div class="reveal delay-100 bg-white dark:bg-slate-800 rounded-[2rem] shadow-xl overflow-hidden group border border-slate-100 dark:border-slate-700 hover:-translate-y-3 transition-all duration-500 flex flex-col relative hover:shadow-2xl hover:shadow-accent/10">
+                    <div class="absolute top-5 right-5 bg-accent text-slate-900 text-xs font-black px-3 py-1.5 rounded-xl z-20 shadow-lg uppercase tracking-wider">
                         Ma e kërkume
                     </div>
                     <!-- Image Area -->
-                    <div class="relative h-48 sm:h-64 overflow-hidden">
+                    <div class="relative h-64 overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent z-10"></div>
                         <img src="https://images.pexels.com/photos/7218011/pexels-photo-7218011.jpeg" alt="Ngjyrosje e Mbrendshme" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute bottom-4 left-4 sm:bottom-5 sm:left-6 z-20">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-md rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 shadow-lg border border-white/30 text-white">
-                                <i data-lucide="home" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                        <div class="absolute bottom-5 left-6 z-20">
+                            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-3 shadow-lg border border-white/30 text-white">
+                                <i data-lucide="home" class="w-6 h-6"></i>
                             </div>
-                            <h4 class="text-xl sm:text-2xl font-black text-white group-hover:text-accent transition-colors">Lyerje e brendshme</h4>
+                            <h4 class="text-2xl font-black text-white group-hover:text-accent transition-colors">Lyerje e brendshme</h4>
                         </div>
                     </div>
                     <!-- Content Area -->
-                    <div class="p-4 sm:p-6 flex-1 flex flex-col bg-white dark:bg-slate-800">
-                        <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed flex-1 font-medium">Shërbim profesional i lyerjes së hapësirave të brendshme si muret dhe tavanet e shtëpive, banesave dhe lokaleve. Përfshin aplikim të ngjyrës në mënyrë të rregullt dhe uniforme.</p>
+                    <div class="p-6 flex-1 flex flex-col bg-white dark:bg-slate-800">
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed flex-1 font-medium">Shërbim profesional i lyerjes së hapësirave të brendshme si muret dhe tavanet e shtëpive, banesave dhe lokaleve. Përfshin aplikim të ngjyrës në mënyrë të rregullt dhe uniforme, duke siguruar pamje të pastër dhe të freskët në çdo ambient. Punimi bëhet me kujdes për detaje, pa njolla dhe me mbrojtje të sipërfaqeve përreth gjatë procesit..</p>
                         
-                        <div class="space-y-2.5 sm:space-y-3 mt-auto bg-slate-50 dark:bg-slate-800/50 p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-100 dark:border-slate-700">
-                            <div class="flex items-center justify-between pb-2 sm:pb-3 border-b border-slate-200 dark:border-slate-700">
-                                <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Veç Puna e Dorës:</span>
-                                <span class="text-primary dark:text-white font-black text-base sm:text-lg">0.40€ <span class="text-[9px] sm:text-[10px] font-bold text-slate-400">/m²</span></span>
+                        <div class="space-y-3 mt-auto bg-slate-50 dark:bg-slate-800/50 p-4 rounded-2xl border border-slate-100 dark:border-slate-700">
+                            <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-700">
+                                <span class="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Veç Puna e Dorës:</span>
+                                <span class="text-primary dark:text-white font-black text-lg">0.40€ <span class="text-[10px] font-bold text-slate-400">/m²</span></span>
                             </div>
                             <div class="flex items-center justify-between pt-1">
-                                <span class="text-[10px] sm:text-xs text-green-600 dark:text-green-400 font-bold uppercase tracking-wider">Me Ngjyrën Tonë:</span>
-                                <span class="text-green-600 dark:text-green-400 font-black text-base sm:text-lg">0.50€ <span class="text-[9px] sm:text-[10px] font-bold text-green-500/70">/m²</span></span>
+                                <span class="text-xs text-green-600 dark:text-green-400 font-bold uppercase tracking-wider">Me Ngjyrën Tonë:</span>
+                                <span class="text-green-600 dark:text-green-400 font-black text-lg">0.50€ <span class="text-[10px] font-bold text-green-500/70">/m²</span></span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Service 2 -->
-                <div class="reveal delay-200 bg-white dark:bg-slate-800 rounded-[1.5rem] sm:rounded-[2rem] shadow-xl overflow-hidden group border border-slate-100 dark:border-slate-700 hover:-translate-y-2 sm:hover:-translate-y-3 transition-all duration-500 flex flex-col hover:shadow-2xl hover:shadow-accent/10">
-                    <div class="relative h-48 sm:h-64 overflow-hidden">
+                <div class="reveal delay-200 bg-white dark:bg-slate-800 rounded-[2rem] shadow-xl overflow-hidden group border border-slate-100 dark:border-slate-700 hover:-translate-y-3 transition-all duration-500 flex flex-col hover:shadow-2xl hover:shadow-accent/10">
+                    <div class="relative h-64 overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent z-10"></div>
                         <img src="https://images.pexels.com/photos/7495857/pexels-photo-7495857.jpeg" alt="Ngjyrosje Fasadash" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute bottom-4 left-4 sm:bottom-5 sm:left-6 z-20">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-md rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 shadow-lg border border-white/30 text-white">
-                                <i data-lucide="building" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                        <div class="absolute bottom-5 left-6 z-20">
+                            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-3 shadow-lg border border-white/30 text-white">
+                                <i data-lucide="building" class="w-6 h-6"></i>
                             </div>
-                            <h4 class="text-xl sm:text-2xl font-black text-white group-hover:text-accent transition-colors">Lyerje e jashtme</h4>
+                            <h4 class="text-2xl font-black text-white group-hover:text-accent transition-colors">Lyerje e jashtme</h4>
                         </div>
                     </div>
-                    <div class="p-4 sm:p-6 flex-1 flex flex-col bg-white dark:bg-slate-800">
-                        <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed flex-1 font-medium">Shërbim i specializuar për lyerjen e mureve të jashtme të objekteve, i cili ndihmon në përmirësimin e pamjes dhe mbrojtjen e fasadës nga kushtet atmosferike si shiu, dielli dhe lagështia.</p>
-                        <div class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-100 dark:border-slate-700 mt-auto">
-                            <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Çmimi nga:</span>
-                            <span class="text-primary dark:text-white font-black text-base sm:text-lg">0.75€ <span class="text-[9px] sm:text-[10px] font-bold text-slate-400">/m²</span></span>
+                    <div class="p-6 flex-1 flex flex-col bg-white dark:bg-slate-800">
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed flex-1 font-medium">Shërbim i specializuar për lyerjen e mureve të jashtme të objekteve, i cili ndihmon në përmirësimin e pamjes dhe mbrojtjen e fasadës nga kushtet atmosferike si shiu, dielli dhe lagështia. Përdoren materiale të përshtatshme për ambiente të jashtme që sigurojnë qëndrueshmëri dhe jetëgjatësi të ngjyrës.</p>
+                        <div class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-4 rounded-2xl border border-slate-100 dark:border-slate-700 mt-auto">
+                            <span class="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Çmimi nga:</span>
+                            <span class="text-primary dark:text-white font-black text-lg">0.75€ <span class="text-[10px] font-bold text-slate-400">/m²</span></span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Service 3 -->
-                <div class="reveal delay-300 bg-white dark:bg-slate-800 rounded-[1.5rem] sm:rounded-[2rem] shadow-xl overflow-hidden group border border-slate-100 dark:border-slate-700 hover:-translate-y-2 sm:hover:-translate-y-3 transition-all duration-500 flex flex-col hover:shadow-2xl hover:shadow-accent/10">
-                    <div class="relative h-48 sm:h-64 overflow-hidden">
+                <div class="reveal delay-300 bg-white dark:bg-slate-800 rounded-[2rem] shadow-xl overflow-hidden group border border-slate-100 dark:border-slate-700 hover:-translate-y-3 transition-all duration-500 flex flex-col hover:shadow-2xl hover:shadow-accent/10">
+                    <div class="relative h-64 overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent z-10"></div>
                         <img src="https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg" alt="Riparim dyer dhe dritare" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute bottom-4 left-4 sm:bottom-5 sm:left-6 z-20">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-md rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 shadow-lg border border-white/30 text-white">
-                                <i data-lucide="door-open" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                        <div class="absolute bottom-5 left-6 z-20">
+                            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-3 shadow-lg border border-white/30 text-white">
+                                <i data-lucide="door-open" class="w-6 h-6"></i>
                             </div>
-                            <h4 class="text-xl sm:text-2xl font-black text-white group-hover:text-accent transition-colors">Dyer e Dritare</h4>
+                            <h4 class="text-2xl font-black text-white group-hover:text-accent transition-colors">Dyer e Dritare</h4>
                         </div>
                     </div>
-                    <div class="p-4 sm:p-6 flex-1 flex flex-col bg-white dark:bg-slate-800">
-                        <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed flex-1 font-medium">Ky shërbim përfshin restaurimin dhe lyerjen e dyerve dhe kornizave të dritareve prej druri ose metali. Ideale për rinovim të elementeve të vjetra pa nevojë për zëvendësim.</p>
-                        <div class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-100 dark:border-slate-700 mt-auto">
-                            <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Çmimi nga:</span>
-                            <span class="text-primary dark:text-white font-black text-base sm:text-lg">25.00€ <span class="text-[9px] sm:text-[10px] font-bold text-slate-400">/copë</span></span>
+                    <div class="p-6 flex-1 flex flex-col bg-white dark:bg-slate-800">
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed flex-1 font-medium">Ky shërbim përfshin restaurimin dhe lyerjen e dyerve dhe kornizave të dritareve prej druri ose metali. Përfshihet pastrimi i sipërfaqes, përgatitja para lyerjes dhe aplikimi i ngjyrës për një pamje të re dhe më të qëndrueshme. Ideale për rinovim të elementeve të vjetra pa nevojë për zëvendësim.</p>
+                        <div class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-4 rounded-2xl border border-slate-100 dark:border-slate-700 mt-auto">
+                            <span class="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Çmimi nga:</span>
+                            <span class="text-primary dark:text-white font-black text-lg">25.00€ <span class="text-[10px] font-bold text-slate-400">/copë</span></span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Service 4 -->
-                <div class="reveal delay-400 bg-white dark:bg-slate-800 rounded-[1.5rem] sm:rounded-[2rem] shadow-xl overflow-hidden group border border-slate-100 dark:border-slate-700 hover:-translate-y-2 sm:hover:-translate-y-3 transition-all duration-500 flex flex-col hover:shadow-2xl hover:shadow-accent/10">
-                    <div class="relative h-48 sm:h-64 overflow-hidden">
+                <div class="reveal delay-400 bg-white dark:bg-slate-800 rounded-[2rem] shadow-xl overflow-hidden group border border-slate-100 dark:border-slate-700 hover:-translate-y-3 transition-all duration-500 flex flex-col hover:shadow-2xl hover:shadow-accent/10">
+                    <div class="relative h-64 overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent z-10"></div>
                         <img src="https://images.pexels.com/photos/20414828/pexels-photo-20414828.jpeg" alt="Ngjyrosje Ograja" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute bottom-4 left-4 sm:bottom-5 sm:left-6 z-20">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-md rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 shadow-lg border border-white/30 text-white">
-                                <i data-lucide="fence" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                        <div class="absolute bottom-5 left-6 z-20">
+                            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-3 shadow-lg border border-white/30 text-white">
+                                <i data-lucide="fence" class="w-6 h-6"></i>
                             </div>
-                            <h4 class="text-xl sm:text-2xl font-black text-white group-hover:text-accent transition-colors">Lyerje gardhe</h4>
+                            <h4 class="text-2xl font-black text-white group-hover:text-accent transition-colors">Lyerje e gardheve / hekurave</h4>
                         </div>
                     </div>
-                    <div class="p-4 sm:p-6 flex-1 flex flex-col bg-white dark:bg-slate-800">
-                        <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed flex-1 font-medium">Shërbim për lyerjen dhe mbrojtjen e strukturave metalike si gardhe, hekura dritaresh dhe porta. Trajtim anti-rust dhe aplikim i ngjyrës mbrojtëse.</p>
-                        <div class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-100 dark:border-slate-700 mt-auto">
-                            <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Çmimi nga:</span>
-                            <span class="text-primary dark:text-white font-black text-base sm:text-lg">2.00€ <span class="text-[9px] sm:text-[10px] font-bold text-slate-400">/m²</span></span>
+                    <div class="p-6 flex-1 flex flex-col bg-white dark:bg-slate-800">
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed flex-1 font-medium">Shërbim për lyerjen dhe mbrojtjen e strukturave metalike si gardhe, hekura dritaresh dhe porta. Procesi përfshin pastrim nga ndryshku, trajtim anti-rust dhe aplikim të ngjyrës mbrojtëse për të zgjatur jetëgjatësinë e metalit dhe për të përmirësuar pamjen estetike të objektit.</p>
+                        <div class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-4 rounded-2xl border border-slate-100 dark:border-slate-700 mt-auto">
+                            <span class="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Çmimi nga:</span>
+                            <span class="text-primary dark:text-white font-black text-lg">2.00€ <span class="text-[10px] font-bold text-slate-400">/m²</span></span>
                         </div>
                     </div>
                 </div>
@@ -357,64 +359,64 @@
     </section>
 
     <!-- Seksioni Kalkulatori -->
-    <section id="calculator" class="py-16 sm:py-32 bg-slate-50 dark:bg-slate-950 relative transition-colors duration-300">
+    <section id="calculator" class="py-24 sm:py-32 bg-slate-50 dark:bg-slate-950 relative transition-colors duration-300">
         <div class="absolute top-0 right-0 -mr-40 -mt-40 w-96 h-96 rounded-full bg-accent/5 dark:bg-accent/10 blur-3xl pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 -ml-40 -mb-40 w-96 h-96 rounded-full bg-blue-500/5 dark:bg-blue-500/10 blur-3xl pointer-events-none"></div>
 
         <div class="max-w-[95rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
-            <!-- Header i Kalkulatorit -->
-            <div class="text-center mb-10 sm:mb-16 reveal">
-                <span class="text-accent font-black tracking-widest uppercase text-xs sm:text-sm mb-2 sm:mb-3 block">Kalkulatori i Shpejtë</span>
-                <h2 class="text-3xl md:text-5xl font-extrabold text-primary dark:text-white mb-3 sm:mb-4">Krijo Oferten Tande</h2>
-                <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-sm sm:text-lg mb-5 sm:mb-6">Shtoni dhomat dhe zgjedhni pakon e ngjyrosjes. Llogaritje e qartë pa asni kosto t'mshihun.</p>
+            <!-- Header i Kalkulatorit me Butonin e ri -->
+            <div class="text-center mb-16 reveal">
+                <span class="text-accent font-black tracking-widest uppercase text-sm mb-3 block">Kalkulatori i Shpejtë</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-primary dark:text-white mb-4">Krijo Oferten Tande</h2>
+                <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-lg mb-6">Shtoni dhomat dhe zgjedhni pakon e ngjyrosjes. Llogaritje e qartë pa asni kosto t'mshihun.</p>
                 
                 <!-- Butoni Udhërrëfyes Interaktiv (Interactive Tour) -->
-                <button onclick="startTour()" class="inline-flex items-center justify-center gap-2 sm:gap-2.5 bg-white dark:bg-slate-800 text-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 px-4 py-2.5 sm:px-6 sm:py-3 rounded-full font-bold shadow-sm hover:shadow-md hover:border-accent dark:hover:border-accent hover:-translate-y-0.5 transition-all duration-300 group relative z-30 text-sm sm:text-base">
-                    <div class="bg-accent/20 dark:bg-accent/10 p-1 sm:p-1.5 rounded-full group-hover:bg-accent group-hover:text-white transition-colors text-accent">
-                        <i data-lucide="play" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                <button onclick="startTour()" class="inline-flex items-center justify-center gap-2.5 bg-white dark:bg-slate-800 text-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 px-6 py-3 rounded-full font-bold shadow-sm hover:shadow-md hover:border-accent dark:hover:border-accent hover:-translate-y-0.5 transition-all duration-300 group relative z-30">
+                    <div class="bg-accent/20 dark:bg-accent/10 p-1.5 rounded-full group-hover:bg-accent group-hover:text-white transition-colors text-accent">
+                        <i data-lucide="play" class="w-4 h-4 fill-current"></i>
                     </div>
                     Si ta përdori? (Udhërrëfyesi)
                 </button>
             </div>
 
-            <div class="flex flex-col xl:flex-row gap-6 sm:gap-8 lg:gap-12">
+            <div class="flex flex-col xl:flex-row gap-8 lg:gap-12">
                 
                 <!-- Forma (E majtë) -->
-                <div id="form-panel" class="reveal delay-100 w-full xl:w-[38%] bg-white dark:bg-slate-900 p-4 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] border border-slate-200/60 dark:border-slate-800 shadow-premium dark:shadow-premium-dark transition-all duration-300 h-fit relative">
+                <div id="form-panel" class="reveal delay-100 w-full xl:w-[38%] bg-white dark:bg-slate-900 p-6 sm:p-10 rounded-[2.5rem] border border-slate-200/60 dark:border-slate-800 shadow-premium dark:shadow-premium-dark transition-all duration-300 h-fit relative">
                     
-                    <div class="flex justify-between items-center mb-5 sm:mb-8">
-                        <h3 class="text-xl sm:text-2xl font-black text-primary dark:text-white flex items-center gap-2.5 sm:gap-3">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-br from-primary to-slate-700 dark:from-accent dark:to-orange-500 text-white dark:text-slate-900 shadow-lg flex items-center justify-center">
-                                <i data-lucide="calculator" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                    <div class="flex justify-between items-center mb-8">
+                        <h3 class="text-2xl font-black text-primary dark:text-white flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-slate-700 dark:from-accent dark:to-orange-500 text-white dark:text-slate-900 shadow-lg flex items-center justify-center">
+                                <i data-lucide="calculator" class="w-6 h-6"></i>
                             </div>
                             <span id="formTitle">Shto Dhomën</span>
                         </h3>
                         <div class="text-right xl:hidden flex flex-col items-end">
-                            <div class="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5 sm:mb-1">Totali Live:</div>
-                            <div class="text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-accent to-amber-500" id="mobileLiveTotal">0.00 €</div>
+                            <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Totali Live:</div>
+                            <div class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-accent to-amber-500" id="mobileLiveTotal">0.00 €</div>
                         </div>
                     </div>
 
-                    <div class="space-y-5 sm:space-y-6">
+                    <div class="space-y-6">
                         <!-- Tour Step 1 (Emri i dhomës) -->
                         <div id="tour-step-1">
                             <div>
-                                <label class="text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase mb-2.5 sm:mb-3 block ml-1 tracking-wider">Dhomat Standarde</label>
-                                <div class="flex flex-wrap gap-2 sm:gap-2.5">
-                                    <button type="button" onclick="applyPreset('Sallon')" class="flex-1 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-accent dark:hover:border-accent hover:bg-accent/5 dark:hover:bg-accent/10 text-slate-700 dark:text-slate-200 py-2 sm:py-3 rounded-full text-[13px] sm:text-sm font-bold transition-all shadow-sm active:scale-95">Sallon</button>
-                                    <button type="button" onclick="applyPreset('Dhomë Gjumit')" class="flex-1 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-accent dark:hover:border-accent hover:bg-accent/5 dark:hover:bg-accent/10 text-slate-700 dark:text-slate-200 py-2 sm:py-3 rounded-full text-[13px] sm:text-sm font-bold transition-all shadow-sm active:scale-95">Dhomë</button>
-                                    <button type="button" onclick="applyPreset('Kuzhinë')" class="flex-1 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-accent dark:hover:border-accent hover:bg-accent/5 dark:hover:bg-accent/10 text-slate-700 dark:text-slate-200 py-2 px-3 sm:py-3 sm:px-4 rounded-full text-[13px] sm:text-sm font-bold transition-all shadow-sm active:scale-95">Kuzhinë</button>
+                                <label class="text-[11px] font-bold text-slate-400 uppercase mb-3 block ml-1 tracking-wider">Dhomat Standarde</label>
+                                <div class="flex flex-wrap gap-2.5">
+                                    <button type="button" onclick="applyPreset('Sallon')" class="flex-1 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-accent dark:hover:border-accent hover:bg-accent/5 dark:hover:bg-accent/10 text-slate-700 dark:text-slate-200 py-3 rounded-full text-sm font-bold transition-all shadow-sm active:scale-95">Sallon</button>
+                                    <button type="button" onclick="applyPreset('Dhomë Gjumit')" class="flex-1 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-accent dark:hover:border-accent hover:bg-accent/5 dark:hover:bg-accent/10 text-slate-700 dark:text-slate-200 py-3 rounded-full text-sm font-bold transition-all shadow-sm active:scale-95">Dhomë</button>
+                                    <button type="button" onclick="applyPreset('Kuzhinë')" class="flex-1 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-accent dark:hover:border-accent hover:bg-accent/5 dark:hover:bg-accent/10 text-slate-700 dark:text-slate-200 py-3 px-4 rounded-full text-sm font-bold transition-all shadow-sm active:scale-95">Kuzhinë</button>
                                 </div>
-                                <div class="flex flex-wrap gap-2 sm:gap-2.5 mt-2 sm:mt-2.5">
-                                    <button type="button" onclick="applyPreset('Korridor')" class="flex-1 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-accent dark:hover:border-accent hover:bg-accent/5 dark:hover:bg-accent/10 text-slate-700 dark:text-slate-200 py-2 px-3 sm:py-3 sm:px-4 rounded-full text-[13px] sm:text-sm font-bold transition-all shadow-sm active:scale-95">Korridor</button>
-                                    <button type="button" onclick="applyPreset('Banjo')" class="flex-1 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-accent dark:hover:border-accent hover:bg-accent/5 dark:hover:bg-accent/10 text-slate-700 dark:text-slate-200 py-2 px-3 sm:py-3 sm:px-4 rounded-full text-[13px] sm:text-sm font-bold transition-all shadow-sm active:scale-95">Banjo</button>
+                                <div class="flex flex-wrap gap-2.5 mt-2.5">
+                                    <button type="button" onclick="applyPreset('Korridor')" class="flex-1 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-accent dark:hover:border-accent hover:bg-accent/5 dark:hover:bg-accent/10 text-slate-700 dark:text-slate-200 py-3 px-4 rounded-full text-sm font-bold transition-all shadow-sm active:scale-95">Korridor</button>
+                                    <button type="button" onclick="applyPreset('Banjo')" class="flex-1 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-accent dark:hover:border-accent hover:bg-accent/5 dark:hover:bg-accent/10 text-slate-700 dark:text-slate-200 py-3 px-4 rounded-full text-sm font-bold transition-all shadow-sm active:scale-95">Banjo</button>
                                 </div>
                             </div>
 
-                            <div class="relative group mt-5 sm:mt-6">
-                                <label class="text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase mb-2 block ml-1 tracking-wider">Emërtimi i Dhomës</label>
-                                <input list="room-presets" id="roomName" placeholder="P.sh. Dhoma e Fëmijëve..." class="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800 focus:border-accent outline-none transition-all font-semibold text-sm sm:text-base text-slate-700 dark:text-white shadow-inner focus:shadow-md">
+                            <div class="relative group mt-6">
+                                <label class="text-[11px] font-bold text-slate-400 uppercase mb-2 block ml-1 tracking-wider">Emërtimi i Dhomës</label>
+                                <input list="room-presets" id="roomName" placeholder="P.sh. Dhoma e Fëmijëve..." class="w-full px-5 py-4 rounded-2xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800 focus:border-accent outline-none transition-all font-semibold text-slate-700 dark:text-white shadow-inner focus:shadow-md">
                                 <datalist id="room-presets">
                                     <option value="Sallon">
                                     <option value="Dhomë Gjumit">
@@ -428,115 +430,164 @@
                         </div>
 
                         <!-- Tour Step 2 (Përmasat/Metrat) -->
-                        <div id="tour-step-2" class="grid grid-cols-2 gap-3 sm:gap-5">
-                            <div class="bg-slate-50 dark:bg-slate-800 p-3 sm:p-4 rounded-xl sm:rounded-[1.5rem] border-2 border-slate-100 dark:border-slate-700 flex flex-col items-center">
-                                <label class="text-[10px] sm:text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase mb-2 sm:mb-3 tracking-wider">Gjerësia (m)</label>
+                        <div id="tour-step-2" class="grid grid-cols-2 gap-5">
+                            <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-[1.5rem] border-2 border-slate-100 dark:border-slate-700 flex flex-col items-center">
+                                <label class="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase mb-3 tracking-wider">Gjerësia (m)</label>
                                 <div class="flex items-center justify-between w-full bg-white dark:bg-slate-900 rounded-full p-1 shadow-sm border border-slate-100 dark:border-slate-800">
-                                    <button type="button" onclick="adjustDim('roomWidth', -0.5)" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-lg sm:text-xl active:scale-90 transition-all shadow-sm">-</button>
-                                    <input type="number" inputmode="decimal" id="roomWidth" value="" placeholder="0.0" step="0.1" class="w-12 sm:w-14 text-center font-black text-xl sm:text-2xl bg-transparent outline-none text-slate-800 dark:text-white placeholder:text-slate-300 dark:placeholder:text-slate-600">
-                                    <button type="button" onclick="adjustDim('roomWidth', 0.5)" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-lg sm:text-xl active:scale-90 transition-all shadow-sm">+</button>
+                                    <button type="button" onclick="adjustDim('roomWidth', -0.5)" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-xl active:scale-90 transition-all shadow-sm">-</button>
+                                    <input type="number" inputmode="decimal" id="roomWidth" value="" placeholder="0.0" step="0.1" class="w-14 text-center font-black text-2xl bg-transparent outline-none text-slate-800 dark:text-white placeholder:text-slate-300 dark:placeholder:text-slate-600">
+                                    <button type="button" onclick="adjustDim('roomWidth', 0.5)" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-xl active:scale-90 transition-all shadow-sm">+</button>
                                 </div>
                             </div>
-                            <div class="bg-slate-50 dark:bg-slate-800 p-3 sm:p-4 rounded-xl sm:rounded-[1.5rem] border-2 border-slate-100 dark:border-slate-700 flex flex-col items-center">
-                                <label class="text-[10px] sm:text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase mb-2 sm:mb-3 tracking-wider">Gjatësia (m)</label>
+                            <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-[1.5rem] border-2 border-slate-100 dark:border-slate-700 flex flex-col items-center">
+                                <label class="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase mb-3 tracking-wider">Gjatësia (m)</label>
                                 <div class="flex items-center justify-between w-full bg-white dark:bg-slate-900 rounded-full p-1 shadow-sm border border-slate-100 dark:border-slate-800">
-                                    <button type="button" onclick="adjustDim('roomLength', -0.5)" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-lg sm:text-xl active:scale-90 transition-all shadow-sm">-</button>
-                                    <input type="number" inputmode="decimal" id="roomLength" value="" placeholder="0.0" step="0.1" class="w-12 sm:w-14 text-center font-black text-xl sm:text-2xl bg-transparent outline-none text-slate-800 dark:text-white placeholder:text-slate-300 dark:placeholder:text-slate-600">
-                                    <button type="button" onclick="adjustDim('roomLength', 0.5)" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-lg sm:text-xl active:scale-90 transition-all shadow-sm">+</button>
+                                    <button type="button" onclick="adjustDim('roomLength', -0.5)" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-xl active:scale-90 transition-all shadow-sm">-</button>
+                                    <input type="number" inputmode="decimal" id="roomLength" value="" placeholder="0.0" step="0.1" class="w-14 text-center font-black text-2xl bg-transparent outline-none text-slate-800 dark:text-white placeholder:text-slate-300 dark:placeholder:text-slate-600">
+                                    <button type="button" onclick="adjustDim('roomLength', 0.5)" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-xl active:scale-90 transition-all shadow-sm">+</button>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Switch për Tavanin -->
-                        <label class="flex items-center justify-between bg-slate-50 dark:bg-slate-800 p-3.5 sm:p-5 rounded-xl sm:rounded-2xl border-2 border-slate-100 dark:border-slate-700 cursor-pointer group active:scale-[0.98] transition-all select-none hover:border-accent/50">
-                            <div class="flex items-center gap-3 sm:gap-4">
-                                <div class="bg-white dark:bg-slate-900 p-2 sm:p-2.5 rounded-xl shadow-sm transition-colors">
-                                    <i data-lucide="maximize" class="w-4 h-4 sm:w-5 sm:h-5 text-slate-500 dark:text-slate-400 group-hover:text-accent"></i>
+                        <label class="flex items-center justify-between bg-slate-50 dark:bg-slate-800 p-5 rounded-2xl border-2 border-slate-100 dark:border-slate-700 cursor-pointer group active:scale-[0.98] transition-all select-none hover:border-accent/50">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-white dark:bg-slate-900 p-2.5 rounded-xl shadow-sm transition-colors">
+                                    <i data-lucide="maximize" class="w-5 h-5 text-slate-500 dark:text-slate-400 group-hover:text-accent"></i>
                                 </div>
                                 <div>
-                                    <span class="block font-black text-slate-700 dark:text-white text-[13px] sm:text-[15px]">Me Tavan</span>
-                                    <span class="block text-[10px] sm:text-xs text-slate-400 font-medium mt-0.5">Llogarite edhe tavanin</span>
+                                    <span class="block font-black text-slate-700 dark:text-white text-[15px]">Me Tavan</span>
+                                    <span class="block text-xs text-slate-400 font-medium mt-0.5">Llogarite edhe tavanin e dhomës</span>
                                 </div>
                             </div>
-                            <div class="relative flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8">
-                                <input type="checkbox" id="includeCeiling" checked class="peer appearance-none w-6 h-6 sm:w-8 sm:h-8 border-2 border-slate-300 dark:border-slate-600 rounded-lg sm:rounded-xl checked:bg-accent checked:border-accent transition-all cursor-pointer">
-                                <i data-lucide="check" class="absolute text-slate-900 w-4 h-4 sm:w-5 sm:h-5 opacity-0 peer-checked:opacity-100 pointer-events-none stroke-[3] scale-50 peer-checked:scale-100 transition-all"></i>
+                            <div class="relative flex items-center justify-center w-8 h-8">
+                                <input type="checkbox" id="includeCeiling" checked class="peer appearance-none w-8 h-8 border-2 border-slate-300 dark:border-slate-600 rounded-xl checked:bg-accent checked:border-accent transition-all cursor-pointer">
+                                <i data-lucide="check" class="absolute text-slate-900 w-5 h-5 opacity-0 peer-checked:opacity-100 pointer-events-none stroke-[3] scale-50 peer-checked:scale-100 transition-all"></i>
                             </div>
                         </label>
 
+                        <!-- Zbritjet (Dyer dhe Dritare) -->
+                        <div class="border-t-2 border-slate-100 dark:border-slate-800/60 pt-5 mt-2">
+                            <label class="text-[11px] font-bold text-slate-400 uppercase mb-3 block ml-1 tracking-wider">Zbritjet nga sipërfaqja (Opsionale)</label>
+                            
+                            <!-- Dyer -->
+                            <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-700 mb-3">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="font-bold text-[13px] text-slate-700 dark:text-slate-200 flex items-center gap-2"><i data-lucide="door-closed" class="w-4 h-4"></i> Numri i Dyerve</span>
+                                    <div class="flex items-center gap-2 bg-white dark:bg-slate-900 rounded-xl p-1 shadow-sm border border-slate-100 dark:border-slate-700">
+                                        <button type="button" onclick="adjustCount('doorCount', -1)" class="w-7 h-7 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 font-bold active:scale-95">-</button>
+                                        <input type="number" id="doorCount" value="0" min="0" class="w-6 text-center font-black bg-transparent outline-none text-[15px] text-slate-800 dark:text-white" readonly>
+                                        <button type="button" onclick="adjustCount('doorCount', 1)" class="w-7 h-7 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 font-bold active:scale-95">+</button>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3 bg-white dark:bg-slate-900 p-3 rounded-[1rem] border border-slate-100 dark:border-slate-700/50">
+                                    <div>
+                                        <label class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Gjerësia (m)</label>
+                                        <input type="number" id="doorW" value="1.0" step="0.1" class="w-full mt-1 p-2 rounded-lg border-2 border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-black text-slate-700 dark:text-white outline-none focus:border-accent dark:focus:border-accent transition-colors">
+                                    </div>
+                                    <div>
+                                        <label class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Lartësia (m)</label>
+                                        <input type="number" id="doorH" value="2.0" step="0.1" class="w-full mt-1 p-2 rounded-lg border-2 border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-black text-slate-700 dark:text-white outline-none focus:border-accent dark:focus:border-accent transition-colors">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Dritare -->
+                            <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-700">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="font-bold text-[13px] text-slate-700 dark:text-slate-200 flex items-center gap-2"><i data-lucide="app-window" class="w-4 h-4"></i> Numri i Dritareve</span>
+                                    <div class="flex items-center gap-2 bg-white dark:bg-slate-900 rounded-xl p-1 shadow-sm border border-slate-100 dark:border-slate-700">
+                                        <button type="button" onclick="adjustCount('windowCount', -1)" class="w-7 h-7 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 font-bold active:scale-95">-</button>
+                                        <input type="number" id="windowCount" value="0" min="0" class="w-6 text-center font-black bg-transparent outline-none text-[15px] text-slate-800 dark:text-white" readonly>
+                                        <button type="button" onclick="adjustCount('windowCount', 1)" class="w-7 h-7 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 font-bold active:scale-95">+</button>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3 bg-white dark:bg-slate-900 p-3 rounded-[1rem] border border-slate-100 dark:border-slate-700/50">
+                                    <div>
+                                        <label class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Gjerësia (m)</label>
+                                        <input type="number" id="windowW" value="0.8" step="0.1" class="w-full mt-1 p-2 rounded-lg border-2 border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-black text-slate-700 dark:text-white outline-none focus:border-accent dark:focus:border-accent transition-colors">
+                                    </div>
+                                    <div>
+                                        <label class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Lartësia (m)</label>
+                                        <input type="number" id="windowH" value="1.2" step="0.1" class="w-full mt-1 p-2 rounded-lg border-2 border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-black text-slate-700 dark:text-white outline-none focus:border-accent dark:focus:border-accent transition-colors">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Tour Step 3 (Butoni Shto) -->
-                        <div class="flex gap-2.5 sm:gap-3 pt-2 sm:pt-4">
-                            <button id="cancelEditBtn" onclick="cancelEdit()" class="hidden w-1/3 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-white font-bold py-3 sm:py-4 rounded-xl sm:rounded-2xl transition-all items-center justify-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
+                        <div class="flex gap-3 pt-4">
+                            <button id="cancelEditBtn" onclick="cancelEdit()" class="hidden w-1/3 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-white font-bold py-4 rounded-2xl transition-all items-center justify-center gap-2 text-sm">
                                 Anulo
                             </button>
-                            <button id="submitRoomBtn" onclick="handleRoomSubmit()" class="w-full bg-gradient-to-r from-primary to-slate-800 dark:from-accent dark:to-orange-400 hover:from-slate-800 hover:to-primary dark:hover:from-orange-400 dark:hover:to-accent text-white dark:text-slate-900 font-black py-3 sm:py-4.5 px-4 sm:px-6 rounded-xl sm:rounded-2xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2 sm:gap-3 text-base sm:text-lg h-12 sm:h-16">
-                                <i data-lucide="plus" id="submitBtnIcon" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]"></i> 
+                            <button id="submitRoomBtn" onclick="handleRoomSubmit()" class="w-full bg-gradient-to-r from-primary to-slate-800 dark:from-accent dark:to-orange-400 hover:from-slate-800 hover:to-primary dark:hover:from-orange-400 dark:hover:to-accent text-white dark:text-slate-900 font-black py-4.5 px-6 rounded-2xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-3 text-lg h-16">
+                                <i data-lucide="plus" id="submitBtnIcon" class="w-6 h-6 stroke-[3]"></i> 
                                 <span id="submitBtnText">Shto Dhomën</span>
                             </button>
                         </div>
                     </div>
 
-                    <a href="#invoice-box" class="xl:hidden mt-5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 w-full py-3 rounded-xl font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95 text-sm sm:text-base">
-                        Kqyre Ofertën <i data-lucide="arrow-down" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+                    <a href="#invoice-box" class="xl:hidden mt-6 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 w-full py-4 rounded-2xl font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95">
+                        Kqyre Ofertën e Plotë <i data-lucide="arrow-down" class="w-5 h-5"></i>
                     </a>
                 </div>
 
                 <!-- Pamja Ofertës (E djathtë) -->
                 <div class="reveal delay-300 w-full xl:w-[62%] flex flex-col gap-6">
                     
-                    <div id="invoice-box" class="bg-white dark:bg-slate-900 rounded-[2rem] sm:rounded-[2.5rem] border border-slate-200/80 dark:border-slate-800 shadow-premium dark:shadow-premium-dark overflow-hidden relative transition-colors flex flex-col h-full">
+                    <div id="invoice-box" class="bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-200/80 dark:border-slate-800 shadow-premium dark:shadow-premium-dark overflow-hidden relative transition-colors flex flex-col h-full">
                         
                         <!-- Header i Ofertës -->
-                        <div class="p-4 sm:p-8 border-b border-slate-100 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-900/50">
-                            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-6">
-                                <div class="flex items-center gap-3 sm:gap-4">
-                                    <div class="w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-primary to-slate-800 dark:from-accent dark:to-orange-500 rounded-xl sm:rounded-[1.25rem] flex items-center justify-center shadow-lg">
-                                        <i data-lucide="receipt" class="text-white dark:text-slate-900 w-5 h-5 sm:w-7 sm:h-7"></i>
+                        <div class="p-6 sm:p-8 border-b border-slate-100 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-900/50">
+                            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-slate-800 dark:from-accent dark:to-orange-500 rounded-[1.25rem] flex items-center justify-center shadow-lg">
+                                        <i data-lucide="receipt" class="text-white dark:text-slate-900 w-7 h-7"></i>
                                     </div>
                                     <div>
-                                        <h2 class="text-xl sm:text-2xl font-black text-primary dark:text-white tracking-tight">Oferta Paraprake</h2>
-                                        <p class="text-slate-500 dark:text-slate-400 text-[10px] sm:text-xs uppercase font-extrabold tracking-widest mt-0.5 sm:mt-1">LIKAcolor Shërbime</p>
+                                        <h2 class="text-2xl font-black text-primary dark:text-white tracking-tight">Oferta Paraprake</h2>
+                                        <p class="text-slate-500 dark:text-slate-400 text-xs uppercase font-extrabold tracking-widest mt-1">LIKAcolor Shërbime</p>
                                     </div>
                                 </div>
 
-                                <div class="flex sm:flex-col gap-3 sm:gap-1 text-left sm:text-right w-full sm:w-auto bg-white dark:bg-slate-800 sm:bg-transparent p-3 sm:p-0 rounded-xl border sm:border-0 border-slate-100 dark:border-slate-700">
+                                <div class="flex sm:flex-col gap-4 sm:gap-1 text-left sm:text-right w-full sm:w-auto bg-white dark:bg-slate-800 sm:bg-transparent p-4 sm:p-0 rounded-2xl border sm:border-0 border-slate-100 dark:border-slate-700">
                                     <div class="flex-1 sm:flex-none">
-                                        <span class="text-[9px] sm:text-[10px] text-slate-400 font-bold uppercase tracking-wider block sm:inline sm:mr-2">Ref:</span>
-                                        <span class="text-primary dark:text-white font-black text-sm sm:text-base" id="quoteRef">OFT-XXXXX</span>
+                                        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block sm:inline sm:mr-2">Ref:</span>
+                                        <span class="text-primary dark:text-white font-black" id="quoteRef">OFT-XXXXX</span>
                                     </div>
-                                    <div class="flex-1 sm:flex-none border-l sm:border-0 border-slate-100 dark:border-slate-700 pl-3 sm:pl-0">
-                                        <span class="text-[9px] sm:text-[10px] text-slate-400 font-bold uppercase tracking-wider block sm:inline sm:mr-2">Data:</span>
-                                        <span class="text-primary dark:text-white font-black text-sm sm:text-base" id="invoiceDate">--.--.--</span>
+                                    <div class="flex-1 sm:flex-none border-l sm:border-0 border-slate-100 dark:border-slate-700 pl-4 sm:pl-0">
+                                        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block sm:inline sm:mr-2">Data:</span>
+                                        <span class="text-primary dark:text-white font-black" id="invoiceDate">--.--.--</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Tour Step 4 (Zgjedhja e Paketës) -->
-                        <div id="tour-step-4" class="px-4 sm:px-8 py-4 sm:py-5 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800/80">
-                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 sm:gap-4">
-                                <div class="font-bold text-slate-700 dark:text-slate-200 text-xs sm:text-sm flex items-center gap-2 sm:gap-2.5 w-full md:w-auto">
-                                    <div class="p-1 sm:p-1.5 bg-accent/10 rounded-lg"><i data-lucide="layers" class="text-accent w-3.5 h-3.5 sm:w-4 sm:h-4"></i></div> 
+                        <div id="tour-step-4" class="px-6 sm:px-8 py-5 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800/80">
+                            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                                <div class="font-bold text-slate-700 dark:text-slate-200 text-sm flex items-center gap-2.5 w-full md:w-auto">
+                                    <div class="p-1.5 bg-accent/10 rounded-lg"><i data-lucide="layers" class="text-accent w-4 h-4"></i></div> 
                                     Pakoja e Ngjyrosjes:
                                 </div>
                                 <div class="relative w-full md:w-[60%] xl:w-[300px]">
-                                    <select id="servicePrice" onchange="calculateFinal()" class="w-full pl-3 pr-8 py-2.5 sm:pl-4 sm:pr-10 sm:py-3 rounded-lg sm:rounded-xl border-2 border-slate-200 dark:border-slate-700 focus:border-accent dark:focus:border-accent bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-white font-bold text-[13px] sm:text-sm cursor-pointer transition-all appearance-none outline-none shadow-sm">
-                                        <option value="0.40">Veç Puna e Dorës lyerje (0.40€/m²)</option>
-                                        <option value="0.50">Me Ngjyrën Tonë lyerje (0.50€/m²)</option>
+                                    <select id="servicePrice" onchange="calculateFinal()" class="w-full pl-4 pr-10 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 focus:border-accent dark:focus:border-accent bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-white font-bold text-sm cursor-pointer transition-all appearance-none outline-none shadow-sm">
+                                        <option value="0.40">Veç Puna e Dorës Lyerje e brendshme (0.40€ /m²)</option>
+                                        <option value="0.50">Me Ngjyrën Tonë Lyerje e brendshme (0.50€ /m²)</option>
                                     </select>
-                                    <i data-lucide="chevron-down" class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-slate-400 pointer-events-none"></i>
+                                    <i data-lucide="chevron-down" class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none"></i>
                                 </div>
                             </div>
                             
                             <!-- Sqaruesi i zgjedhjes -->
-                            <div id="materialDisclaimer" class="mt-3 sm:mt-4 text-[11px] sm:text-[13px] text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 p-3 sm:p-3.5 rounded-xl border border-amber-100 dark:border-amber-500/20 font-semibold flex items-start gap-2 transition-all">
-                                <i data-lucide="info" class="w-3.5 h-3.5 sm:w-4 sm:h-4 mt-0.5 shrink-0"></i> 
+                            <div id="materialDisclaimer" class="mt-4 text-[13px] text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 p-3.5 rounded-xl border border-amber-100 dark:border-amber-500/20 font-semibold flex items-start gap-2 transition-all">
+                                <i data-lucide="info" class="w-4 h-4 mt-0.5 shrink-0"></i> 
                                 <span>Kujdes: Ky opsion e mbulon <b>veç punën e dorës</b>. Ngjyra e materialet tjera i bini ju.</span>
                             </div>
                         </div>
 
                         <!-- Tabela e Hapësirave -->
-                        <div class="flex-1 flex flex-col min-h-[200px] sm:min-h-[250px] bg-slate-50/30 dark:bg-slate-900/30">
+                        <div class="flex-1 flex flex-col min-h-[250px] bg-slate-50/30 dark:bg-slate-900/30">
                             <!-- Header Tabela -->
                             <div class="hidden sm:grid grid-cols-12 gap-4 px-8 py-3.5 bg-slate-100/50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800 text-[11px] font-black text-slate-400 uppercase tracking-widest">
                                 <div class="col-span-5">Përshkrimi i Dhomës</div>
@@ -546,59 +597,59 @@
                             </div>
                             
                             <!-- Lista -->
-                            <div id="roomList" class="p-3 sm:p-0 flex-1 overflow-y-auto custom-scrollbar max-h-[300px] sm:max-h-[400px] flex flex-col gap-2.5 sm:gap-0 sm:divide-y sm:divide-slate-100 dark:sm:divide-slate-800/80">
+                            <div id="roomList" class="p-4 sm:p-0 flex-1 overflow-y-auto custom-scrollbar max-h-[400px] flex flex-col gap-3 sm:gap-0 sm:divide-y sm:divide-slate-100 dark:sm:divide-slate-800/80">
                                 <!-- Mbushet nga JS -->
                             </div>
                             
                             <!-- Mesazhi Bosh -->
-                            <div id="emptyMsg" class="py-10 sm:py-20 text-center flex-1 flex flex-col items-center justify-center">
-                                <div class="w-16 h-16 sm:w-20 sm:h-20 bg-slate-100 dark:bg-slate-800/80 rounded-full flex items-center justify-center mb-4 sm:mb-5 text-slate-300 dark:text-slate-600 shadow-inner">
-                                    <i data-lucide="clipboard-list" class="w-8 h-8 sm:w-10 sm:h-10"></i>
+                            <div id="emptyMsg" class="py-20 text-center flex-1 flex flex-col items-center justify-center">
+                                <div class="w-20 h-20 bg-slate-100 dark:bg-slate-800/80 rounded-full flex items-center justify-center mb-5 text-slate-300 dark:text-slate-600 shadow-inner">
+                                    <i data-lucide="clipboard-list" class="w-10 h-10"></i>
                                 </div>
-                                <h4 class="text-slate-600 dark:text-slate-300 font-extrabold text-base sm:text-lg">Oferta asht e thatë</h4>
-                                <p class="text-slate-400 dark:text-slate-500 text-xs sm:text-sm mt-1 sm:mt-2 max-w-xs mx-auto">Shtoni dhomat nga ana e majtë për me ia nisë llogaritjes.</p>
+                                <h4 class="text-slate-600 dark:text-slate-300 font-extrabold text-lg">Oferta asht e thatë</h4>
+                                <p class="text-slate-400 dark:text-slate-500 text-sm mt-2 max-w-xs mx-auto">Shtoni dhomat nga ana e majtë për me ia nisë llogaritjes.</p>
                             </div>
                         </div>
 
                         <!-- Footer Oferta (Totali) -->
-                        <div class="bg-white dark:bg-slate-900 p-4 sm:p-8 border-t border-slate-200 dark:border-slate-800 relative">
+                        <div class="bg-white dark:bg-slate-900 p-6 sm:p-8 border-t border-slate-200 dark:border-slate-800 relative">
                             <!-- Vija ndarëse e prerë -->
                             <div class="absolute top-0 left-4 right-4 h-px border-t-2 border-dashed border-slate-200 dark:border-slate-700/50 -mt-px"></div>
                             
-                            <div class="flex flex-col md:flex-row justify-between items-end gap-5 sm:gap-8">
+                            <div class="flex flex-col md:flex-row justify-between items-end gap-8">
                                 
                                 <!-- Detajet e Sipërfaqes -->
-                                <div class="w-full md:w-[45%] grid grid-cols-2 gap-3 sm:gap-4">
-                                    <div class="bg-slate-50 dark:bg-slate-800 p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-100 dark:border-slate-700">
-                                        <span class="block text-[9px] sm:text-[10px] uppercase font-black text-slate-400 tracking-wider mb-0.5 sm:mb-1">Muret</span>
+                                <div class="w-full md:w-[45%] grid grid-cols-2 gap-4">
+                                    <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border border-slate-100 dark:border-slate-700">
+                                        <span class="block text-[10px] uppercase font-black text-slate-400 tracking-wider mb-1">Muret</span>
                                         <div class="flex items-baseline gap-1">
-                                            <span class="font-black text-lg sm:text-xl text-slate-800 dark:text-white" id="totalWallArea">0</span>
-                                            <span class="text-xs sm:text-sm font-bold text-slate-400">m²</span>
+                                            <span class="font-black text-xl text-slate-800 dark:text-white" id="totalWallArea">0</span>
+                                            <span class="text-sm font-bold text-slate-400">m²</span>
                                         </div>
                                     </div>
-                                    <div class="bg-slate-50 dark:bg-slate-800 p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-100 dark:border-slate-700">
-                                        <span class="block text-[9px] sm:text-[10px] uppercase font-black text-slate-400 tracking-wider mb-0.5 sm:mb-1">Tavanet</span>
+                                    <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border border-slate-100 dark:border-slate-700">
+                                        <span class="block text-[10px] uppercase font-black text-slate-400 tracking-wider mb-1">Tavanet</span>
                                         <div class="flex items-baseline gap-1">
-                                            <span class="font-black text-lg sm:text-xl text-slate-800 dark:text-white" id="totalCeilArea">0</span>
-                                            <span class="text-xs sm:text-sm font-bold text-slate-400">m²</span>
+                                            <span class="font-black text-xl text-slate-800 dark:text-white" id="totalCeilArea">0</span>
+                                            <span class="text-sm font-bold text-slate-400">m²</span>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Kutia e Çmimit -->
-                                <div class="w-full md:w-auto min-w-0 sm:min-w-[300px]">
-                                    <div class="flex justify-between items-center mb-2 sm:mb-3 px-1">
-                                        <span class="font-black text-slate-500 dark:text-slate-400 text-xs sm:text-sm uppercase tracking-wider">Sipërfaqja Komplet:</span>
-                                        <span class="font-black text-slate-800 dark:text-white text-base sm:text-lg"><span id="totalArea">0</span> <span class="text-slate-400 text-xs sm:text-sm">m²</span></span>
+                                <div class="w-full md:w-auto min-w-[300px]">
+                                    <div class="flex justify-between items-center mb-3 px-1">
+                                        <span class="font-black text-slate-500 dark:text-slate-400 text-sm uppercase tracking-wider">Sipërfaqja Komplet:</span>
+                                        <span class="font-black text-slate-800 dark:text-white text-lg"><span id="totalArea">0</span> <span class="text-slate-400 text-sm">m²</span></span>
                                     </div>
                                     
-                                    <div class="bg-gradient-to-br from-primary to-slate-800 dark:from-accent dark:to-orange-500 p-4 sm:p-6 rounded-2xl sm:rounded-[1.5rem] shadow-xl text-white dark:text-slate-900 relative overflow-hidden group">
+                                    <div class="bg-gradient-to-br from-primary to-slate-800 dark:from-accent dark:to-orange-500 p-6 rounded-[1.5rem] shadow-xl text-white dark:text-slate-900 relative overflow-hidden group">
                                         <div class="absolute -right-6 -top-6 w-24 h-24 bg-white/10 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
                                         
-                                        <div class="text-[10px] sm:text-[11px] font-black text-slate-300 dark:text-slate-800/70 uppercase tracking-widest mb-0.5 sm:mb-1 relative z-10">Totali (Përafërsisht)</div>
-                                        <div class="flex items-baseline gap-1.5 sm:gap-2 relative z-10">
-                                            <div class="text-4xl sm:text-5xl font-black tracking-tight" id="finalTotal">0.00</div>
-                                            <div class="text-2xl sm:text-3xl font-bold opacity-80">€</div>
+                                        <div class="text-[11px] font-black text-slate-300 dark:text-slate-800/70 uppercase tracking-widest mb-1 relative z-10">Totali (Përafërsisht)</div>
+                                        <div class="flex items-baseline gap-2 relative z-10">
+                                            <div class="text-5xl font-black tracking-tight" id="finalTotal">0.00</div>
+                                            <div class="text-3xl font-bold opacity-80">€</div>
                                         </div>
                                     </div>
                                 </div>
@@ -607,12 +658,12 @@
                     </div>
 
                     <!-- Tour Step 5 (Butonat e veprimit) -->
-                    <div class="flex flex-col sm:flex-row justify-end gap-3 sm:gap-4 mt-2" id="actionButtons">
-                        <button onclick="clearAllRooms()" class="px-5 py-3 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-slate-500 dark:text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm transition-all flex items-center justify-center gap-2 active:scale-95 text-sm sm:text-base">
-                            <i data-lucide="trash-2" class="w-4 h-4 sm:w-5 sm:h-5"></i> Fshije Ofertën
+                    <div class="flex flex-col sm:flex-row justify-end gap-4 mt-2" id="actionButtons">
+                        <button onclick="clearAllRooms()" class="px-6 py-4 rounded-2xl font-bold text-slate-500 dark:text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm transition-all flex items-center justify-center gap-2 active:scale-95">
+                            <i data-lucide="trash-2" class="w-5 h-5"></i> Fshije Ofertën
                         </button>
-                        <button onclick="downloadInvoice()" id="downloadBtn" class="bg-green-500 hover:bg-green-600 text-white px-5 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl font-black transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2 sm:gap-3 text-base sm:text-lg active:scale-95 opacity-50 pointer-events-none">
-                            <i data-lucide="download" class="w-5 h-5 sm:w-6 sm:h-6"></i> Ruaj si Foto
+                        <button onclick="downloadInvoice()" id="downloadBtn" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-2xl font-black transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-3 text-lg active:scale-95 opacity-50 pointer-events-none">
+                            <i data-lucide="download" class="w-6 h-6"></i> Ruaj si Foto
                         </button>
                     </div>
 
@@ -621,48 +672,48 @@
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-slate-400 py-12 md:py-20 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center md:text-left reveal">
+    <footer class="bg-slate-900 text-slate-400 py-20 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left reveal">
             <div class="flex flex-col items-center md:items-start">
                 <div class="flex items-center gap-3 mb-4 group cursor-pointer">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-tr from-accent to-orange-400 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                        <i data-lucide="paint-roller" class="text-slate-900 w-5 h-5 sm:w-6 sm:h-6"></i>
+                    <div class="w-12 h-12 bg-gradient-to-tr from-accent to-orange-400 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                        <i data-lucide="paint-roller" class="text-slate-900 w-6 h-6"></i>
                     </div>
                     <div class="flex flex-col items-start">
-                        <span class="text-2xl sm:text-3xl font-black text-white tracking-tight leading-none mb-0.5 sm:mb-1">LIKA<span class="text-accent">color</span>.</span>
-                        <a href="tel:+38349585195" class="text-xs sm:text-sm font-bold text-slate-400 flex items-center gap-1.5 group-hover:text-accent transition-colors"><i data-lucide="phone" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i> +383 49 585 195</a>
+                        <span class="text-3xl font-black text-white tracking-tight leading-none mb-1">LIKA<span class="text-accent">color</span>.</span>
+                        <a href="tel:+38349585195" class="text-sm font-bold text-slate-400 flex items-center gap-1.5 group-hover:text-accent transition-colors"><i data-lucide="phone" class="w-4 h-4"></i> +383 49 585 195</a>
                     </div>
                 </div>
-                <p class="text-xs sm:text-sm leading-relaxed max-w-xs mx-auto md:mx-0 text-slate-500 mt-2">Partneri juj ma i besum për lyerje e ngjyrosje të hapësirave, me mbi 10 vjet përvojë pune dhe kualitet evropian.</p>
+                <p class="text-sm leading-relaxed max-w-xs mx-auto md:mx-0 text-slate-500 mt-2">Partneri juj ma i besum për lyerje e ngjyrosje të hapësirave, me mbi 10 vjet përvojë pune dhe kualitet evropian.</p>
             </div>
             <div>
-                <h4 class="text-white font-black mb-4 sm:mb-6 uppercase tracking-wider text-xs sm:text-sm">Kontaktet</h4>
-                <ul class="space-y-3 sm:space-y-4 text-xs sm:text-sm font-medium">
-                    <li class="flex items-center justify-center md:justify-start gap-2.5 sm:gap-3 hover:text-accent transition-colors"><i data-lucide="phone" class="w-4 h-4 sm:w-5 sm:h-5 text-accent"></i> +383 49 585 195</li>
-                    <li class="flex items-center justify-center md:justify-start gap-2.5 sm:gap-3 hover:text-accent transition-colors">
-                        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg>
+                <h4 class="text-white font-black mb-6 uppercase tracking-wider text-sm">Kontaktet</h4>
+                <ul class="space-y-4 text-sm font-medium">
+                    <li class="flex items-center justify-center md:justify-start gap-3 hover:text-accent transition-colors"><i data-lucide="phone" class="w-5 h-5 text-accent"></i> +383 49 585 195</li>
+                    <li class="flex items-center justify-center md:justify-start gap-3 hover:text-accent transition-colors">
+                        <svg class="w-5 h-5 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg>
                         <a href="https://tiktok.com/@lika.color" target="_blank">TikTok: lika.color</a>
                     </li>
-                    <li class="flex items-center justify-center md:justify-start gap-2.5 sm:gap-3 hover:text-accent transition-colors"><i data-lucide="map-pin" class="w-4 h-4 sm:w-5 sm:h-5 text-accent"></i> Prishtinë, Fushë Kosovë, Obiliq</li>
+                    <li class="flex items-center justify-center md:justify-start gap-3 hover:text-accent transition-colors"><i data-lucide="map-pin" class="w-5 h-5 text-accent"></i> Prishtinë, Fushë Kosovë, Obiliq</li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-white font-black mb-4 sm:mb-6 uppercase tracking-wider text-xs sm:text-sm">Rrjetet Sociale</h4>
-                <div class="flex justify-center md:justify-start gap-3 sm:gap-4">
-                    <a href="https://tiktok.com/@lika.color" target="_blank" title="TikTok: lika.color" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent hover:text-slate-900 transition-all shadow-lg hover:scale-110">
-                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 sm:w-5 sm:h-5"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg>
+                <h4 class="text-white font-black mb-6 uppercase tracking-wider text-sm">Rrjetet Sociale</h4>
+                <div class="flex justify-center md:justify-start gap-4">
+                    <a href="https://tiktok.com/@lika.color" target="_blank" title="TikTok: lika.color" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent hover:text-slate-900 transition-all shadow-lg hover:scale-110">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg>
                     </a>
-                    <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent hover:text-slate-900 transition-all shadow-lg hover:scale-110"><i data-lucide="facebook" class="w-4 h-4 sm:w-5 sm:h-5"></i></a>
-                    <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent hover:text-slate-900 transition-all shadow-lg hover:scale-110"><i data-lucide="instagram" class="w-4 h-4 sm:w-5 sm:h-5"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent hover:text-slate-900 transition-all shadow-lg hover:scale-110"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent hover:text-slate-900 transition-all shadow-lg hover:scale-110"><i data-lucide="instagram" class="w-5 h-5"></i></a>
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-slate-800 text-center text-xs sm:text-sm font-medium">
+        <div class="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-slate-800 text-center text-sm font-medium">
              <p>&copy; <span id="year"></span> LIKAcolor Të gjitha të drejtat e rezervuara.</p>
         </div>
     </footer>
 
-    <!-- Shablloni Sekret i Printimit -->
+    <!-- Shablloni Sekret i Printimit (Elegant, i Thjeshtë, i Bardhë) -->
     <div id="print-export-container" class="fixed -left-[9999px] top-0 bg-white w-[850px] p-0 font-sans shadow-none text-slate-800 relative overflow-hidden">
         
         <!-- Vija e Holle lart -->
@@ -699,7 +750,7 @@
                             <th class="pb-4 pl-2">Përshkrimi i Dhomës</th>
                             <th class="pb-4 text-center">Përmasat</th>
                             <th class="pb-4 text-center">Me Tavan</th>
-                            <th class="pb-4 text-right pr-2">Sipërfaqja</th>
+                            <th class="pb-4 text-right pr-2">Sipërfaqja Finale</th>
                         </tr>
                     </thead>
                     <tbody id="printRoomList" class="text-slate-700 font-medium">
@@ -712,7 +763,7 @@
             <div class="flex justify-end mb-12">
                 <div class="w-[55%] bg-slate-50 border border-slate-200 p-8 rounded-3xl">
                     <div class="space-y-3 mb-6">
-                        <div class="flex justify-between text-sm"><span class="text-slate-500 font-semibold">Sipërfaqja e Mureve:</span> <span id="printWallArea" class="font-black text-slate-800">0 m²</span></div>
+                        <div class="flex justify-between text-sm"><span class="text-slate-500 font-semibold">Sipërfaqja e Mureve (neto):</span> <span id="printWallArea" class="font-black text-slate-800">0 m²</span></div>
                         <div class="flex justify-between text-sm"><span class="text-slate-500 font-semibold">Sipërfaqja e Tavaneve:</span> <span id="printCeilArea" class="font-black text-slate-800">0 m²</span></div>
                         <div class="flex justify-between items-center text-sm border-b border-slate-200 pb-5 pt-2">
                             <span class="text-slate-500 font-semibold">Pakoja e Zgjedhur:</span> 
@@ -758,7 +809,7 @@
             <!-- Footer i vogël Printimi -->
             <div class="border-t border-slate-200 pt-6 flex justify-between items-end text-[11px] text-slate-500">
                 <div class="max-w-md font-medium leading-relaxed">
-                    <span class="font-bold text-slate-800">Shënim:</span> Kjo asht llogaritje veç n'letër. Çmimi final bëhet veç masi e këqyr mjeshtri objektin t'juaj. Oferta vlen 15 ditë.
+                    <span class="font-bold text-slate-800">Shënim:</span> Kjo asht llogaritje veç n'letër (nga sipërfaqja e mureve janë zbritur hapësirat e dyerve/dritareve që nuk lyhen). Çmimi final bëhet veç masi e këqyr mjeshtri objektin t'juaj. Oferta vlen 15 ditë.
                 </div>
                 <div class="text-right">
                     <div class="font-bold text-slate-800">+383 49 585 195</div>
@@ -778,20 +829,20 @@
     <div id="tourSpotlight" class="absolute z-[61] hidden pointer-events-none rounded-2xl"></div>
     
     <!-- 3. Karta Moderne me Udhëzime (Tooltip) -->
-    <div id="tourTooltipPanel" class="fixed z-[75] hidden animate-fade-up bottom-4 left-4 right-4 sm:bottom-6 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 sm:w-full sm:max-w-md bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-slate-200/50 dark:border-slate-700/50">
-        <div class="flex justify-between items-center mb-4 sm:mb-5">
-            <span id="tourStepCount" class="bg-accent/15 text-accent font-black text-[10px] sm:text-xs px-3 py-1.5 sm:px-4 sm:py-2 rounded-full uppercase tracking-wider">1 / 5</span>
-            <button onclick="endTour()" class="text-slate-400 hover:text-slate-700 dark:hover:text-white bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 p-2 sm:p-2.5 rounded-full transition-all active:scale-95">
-                <i data-lucide="x" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+    <div id="tourTooltipPanel" class="fixed z-[75] hidden animate-fade-up bottom-6 left-4 right-4 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 sm:w-full sm:max-w-md bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl p-6 sm:p-8 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-slate-200/50 dark:border-slate-700/50">
+        <div class="flex justify-between items-center mb-5">
+            <span id="tourStepCount" class="bg-accent/15 text-accent font-black text-xs px-4 py-2 rounded-full uppercase tracking-wider">1 / 5</span>
+            <button onclick="endTour()" class="text-slate-400 hover:text-slate-700 dark:hover:text-white bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 p-2.5 rounded-full transition-all active:scale-95">
+                <i data-lucide="x" class="w-5 h-5"></i>
             </button>
         </div>
-        <h4 id="tourTitle" class="text-xl sm:text-2xl font-black text-primary dark:text-white mb-2 sm:mb-3 tracking-tight">Titulli</h4>
-        <p id="tourDesc" class="text-slate-500 dark:text-slate-400 text-sm sm:text-[15px] mb-6 sm:mb-8 leading-relaxed font-medium">Përshkrimi</p>
+        <h4 id="tourTitle" class="text-2xl font-black text-primary dark:text-white mb-3 tracking-tight">Titulli</h4>
+        <p id="tourDesc" class="text-slate-500 dark:text-slate-400 text-[15px] mb-8 leading-relaxed font-medium">Përshkrimi</p>
         
         <div class="flex justify-between items-center">
-            <button onclick="endTour()" class="text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 font-extrabold text-xs sm:text-sm transition-colors">Ndalo</button>
-            <button id="tourNextBtn" onclick="nextTourStep()" class="bg-gradient-to-r from-accent to-orange-500 hover:from-orange-500 hover:to-accent text-white font-black py-3 px-6 sm:py-4 sm:px-8 rounded-xl sm:rounded-2xl transition-all shadow-lg active:scale-95 flex items-center gap-2 text-xs sm:text-sm uppercase tracking-wider">
-                Vazhdo <i data-lucide="arrow-right" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+            <button onclick="endTour()" class="text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 font-extrabold text-sm transition-colors">Ndalo</button>
+            <button id="tourNextBtn" onclick="nextTourStep()" class="bg-gradient-to-r from-accent to-orange-500 hover:from-orange-500 hover:to-accent text-white font-black py-4 px-8 rounded-2xl transition-all shadow-lg active:scale-95 flex items-center gap-2 text-sm uppercase tracking-wider">
+                Vazhdo <i data-lucide="arrow-right" class="w-5 h-5"></i>
             </button>
         </div>
     </div>
@@ -885,6 +936,14 @@
             "Garazh": { w: 3.0, l: 5.0 }
         };
 
+        // Funksion i ri për rregullimin e numrave (dyer, dritare)
+        function adjustCount(id, amt) {
+            const el = document.getElementById(id);
+            let val = parseInt(el.value) || 0;
+            val = Math.max(0, val + amt);
+            el.value = val;
+        }
+
         function adjustDim(id, amount) {
             const el = document.getElementById(id);
             let val = parseFloat(el.value) || 0;
@@ -918,22 +977,48 @@
             const incCeil = document.getElementById('includeCeiling').checked;
 
             if (!w || !l || w <= 0 || l <= 0) {
-                alert("Ju lutem plotësoni gjerësinë dhe gjatësinë!");
+                alert("Ju lutem plotësoni gjerësinë dhe gjatësinë e dhomës!");
                 return;
             }
 
             if (!nameInput) nameInput = `Dhoma ${rooms.length + 1}`;
 
-            const wallArea = ((w + l) * 2) * h;
+            // Lexo vlerat për dyer dhe dritare
+            const doorC = parseInt(document.getElementById('doorCount').value) || 0;
+            const doorW = parseFloat(document.getElementById('doorW').value) || 1.0;
+            const doorH = parseFloat(document.getElementById('doorH').value) || 2.0;
+
+            const winC = parseInt(document.getElementById('windowCount').value) || 0;
+            const winW = parseFloat(document.getElementById('windowW').value) || 0.8;
+            const winH = parseFloat(document.getElementById('windowH').value) || 1.2;
+
+            // Llogarit zbritjet nga muret
+            const doorsArea = doorC * doorW * doorH;
+            const windowsArea = winC * winW * winH;
+            const deductionArea = doorsArea + windowsArea;
+
+            // Llogaritja fillestare
+            const grossWallArea = ((w + l) * 2) * h;
+            // Zbresim dyert dhe dritaret (nuk lejon që muri të dal në minus në raste ekstreme)
+            const wallArea = Math.max(0, grossWallArea - deductionArea); 
+            
             const ceilArea = incCeil ? (w * l) : 0;
             const totalRoomArea = wallArea + ceilArea;
 
+            const roomData = {
+                id: editingId !== null ? editingId : Date.now(),
+                name: nameInput, w, l, h, incCeil,
+                doors: { c: doorC, w: doorW, h: doorH },
+                windows: { c: winC, w: winW, h: winH },
+                deductionArea, grossWallArea, wallArea, ceilArea, totalArea: totalRoomArea
+            };
+
             if (editingId !== null) {
                 const index = rooms.findIndex(r => r.id === editingId);
-                if (index !== -1) rooms[index] = { id: editingId, name: nameInput, w, l, h, incCeil, wallArea, ceilArea, totalRoomArea };
+                if (index !== -1) rooms[index] = roomData;
                 cancelEdit();
             } else {
-                rooms.push({ id: Date.now(), name: nameInput, w, l, h, incCeil, wallArea, ceilArea, totalRoomArea });
+                rooms.push(roomData);
                 resetFormFields();
             }
 
@@ -964,8 +1049,17 @@
             document.getElementById('roomLength').value = room.l;
             document.getElementById('includeCeiling').checked = room.incCeil;
 
+            // Plotëso vlerat e dyerve/dritareve
+            document.getElementById('doorCount').value = room.doors.c;
+            document.getElementById('doorW').value = room.doors.w;
+            document.getElementById('doorH').value = room.doors.h;
+            
+            document.getElementById('windowCount').value = room.windows.c;
+            document.getElementById('windowW').value = room.windows.w;
+            document.getElementById('windowH').value = room.windows.h;
+
             document.getElementById('formTitle').textContent = "Ndrysho";
-            document.getElementById('submitBtnText').textContent = "Ruaj";
+            document.getElementById('submitBtnText').textContent = "Ruaj Ndryshimet";
             document.getElementById('submitBtnIcon').setAttribute('data-lucide', 'save');
             document.getElementById('cancelEditBtn').classList.remove('hidden');
             document.getElementById('cancelEditBtn').classList.add('flex');
@@ -992,6 +1086,14 @@
             document.getElementById('roomWidth').value = "";
             document.getElementById('roomLength').value = "";
             document.getElementById('includeCeiling').checked = true;
+
+            document.getElementById('doorCount').value = "0";
+            document.getElementById('doorW').value = "1.0";
+            document.getElementById('doorH').value = "2.0";
+
+            document.getElementById('windowCount').value = "0";
+            document.getElementById('windowW').value = "0.8";
+            document.getElementById('windowH').value = "1.2";
         }
 
         function removeRoom(id) {
@@ -1034,36 +1136,42 @@
             rooms.forEach((room) => {
                 tWall += room.wallArea;
                 tCeil += room.ceilArea;
-                tTotal += room.totalRoomArea;
+                tTotal += room.totalArea;
 
                 const isEditing = room.id === editingId;
                 const bgClass = isEditing ? 'editing-row' : 'bg-white dark:bg-slate-900 sm:bg-transparent';
 
+                // Njoftimi i zvogëlimit nëse ka dyer/dritare
+                let deductionHtml = "";
+                if (room.deductionArea > 0) {
+                    deductionHtml = `<span class="inline-flex items-center gap-1 bg-rose-50 text-rose-500 dark:bg-rose-500/10 px-1.5 py-0.5 rounded ml-2">Zbritje -${room.deductionArea.toFixed(1)}m²</span>`;
+                }
+
                 list.innerHTML += `
-                    <div class="${bgClass} p-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-none border border-slate-100 dark:border-slate-800/80 sm:border-0 shadow-sm sm:shadow-none mb-2.5 sm:mb-0 transition-all flex flex-col sm:grid sm:grid-cols-12 sm:items-center gap-2.5 sm:gap-4 relative group hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                    <div class="${bgClass} p-4 sm:px-8 sm:py-4 rounded-2xl sm:rounded-none border border-slate-100 dark:border-slate-800/80 sm:border-0 shadow-sm sm:shadow-none mb-3 sm:mb-0 transition-all flex flex-col sm:grid sm:grid-cols-12 sm:items-center gap-3 sm:gap-4 relative group hover:bg-slate-50 dark:hover:bg-slate-800/50">
                         
                         <div class="sm:col-span-5 flex justify-between items-start sm:items-center">
                             <div>
-                                <div class="font-extrabold text-slate-800 dark:text-white text-sm sm:text-sm">${room.name}</div>
-                                <div class="text-[9px] sm:text-[10px] text-slate-400 font-bold uppercase mt-1 tracking-wider">Tavan: ${room.incCeil ? '<span class="text-accent">Po</span>' : '<span class="text-slate-300">Jo</span>'}</div>
+                                <div class="font-extrabold text-slate-800 dark:text-white text-base sm:text-sm">${room.name}</div>
+                                <div class="text-[10px] text-slate-400 font-bold uppercase mt-1 tracking-wider flex items-center">Tavan: ${room.incCeil ? '<span class="text-accent ml-1">Po</span>' : '<span class="text-slate-300 ml-1">Jo</span>'} ${deductionHtml}</div>
                             </div>
-                            <div class="sm:hidden font-black text-primary dark:text-white text-lg sm:text-xl">${room.totalRoomArea.toFixed(1)} <span class="text-[10px] sm:text-xs text-slate-400">m²</span></div>
+                            <div class="sm:hidden font-black text-primary dark:text-white text-xl">${room.totalArea.toFixed(1)} <span class="text-xs text-slate-400">m²</span></div>
                         </div>
 
-                        <div class="sm:col-span-3 sm:text-center text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-mono bg-slate-50 dark:bg-slate-800 sm:bg-transparent p-1.5 sm:p-0 rounded-lg inline-block w-max sm:w-auto font-semibold">
+                        <div class="sm:col-span-3 sm:text-center text-sm text-slate-500 dark:text-slate-400 font-mono bg-slate-50 dark:bg-slate-800 sm:bg-transparent p-2 sm:p-0 rounded-lg inline-block w-max sm:w-auto font-semibold">
                             ${room.w}m <span class="text-slate-300 dark:text-slate-600 mx-1">x</span> ${room.l}m
                         </div>
 
                         <div class="hidden sm:block sm:col-span-2 text-right font-black text-slate-800 dark:text-white text-base">
-                            ${room.totalRoomArea.toFixed(1)} <span class="text-[11px] text-slate-400">m²</span>
+                            ${room.totalArea.toFixed(1)} <span class="text-[11px] text-slate-400">m²</span>
                         </div>
 
-                        <div class="sm:col-span-2 flex justify-end sm:justify-center gap-2 absolute top-3 right-3 sm:relative sm:top-0 sm:right-0 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity" data-html2canvas-ignore>
-                            <button onclick="editRoom(${room.id})" class="text-slate-400 hover:text-accent bg-white dark:bg-slate-800 shadow-sm sm:shadow-none border border-slate-100 dark:border-slate-700 sm:border-0 p-1.5 sm:p-2 rounded-lg sm:rounded-xl transition-colors" title="Ndrysho">
-                                <i data-lucide="edit-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+                        <div class="sm:col-span-2 flex justify-end sm:justify-center gap-2 absolute top-4 right-4 sm:relative sm:top-0 sm:right-0 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity" data-html2canvas-ignore>
+                            <button onclick="editRoom(${room.id})" class="text-slate-400 hover:text-accent bg-white dark:bg-slate-800 shadow-sm sm:shadow-none border border-slate-100 dark:border-slate-700 sm:border-0 p-2 rounded-xl transition-colors" title="Ndrysho">
+                                <i data-lucide="edit-2" class="w-4 h-4"></i>
                             </button>
-                            <button onclick="removeRoom(${room.id})" class="text-slate-400 hover:text-red-500 bg-white dark:bg-slate-800 shadow-sm sm:shadow-none border border-slate-100 dark:border-slate-700 sm:border-0 p-1.5 sm:p-2 rounded-lg sm:rounded-xl transition-colors" title="Fshije">
-                                <i data-lucide="trash-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+                            <button onclick="removeRoom(${room.id})" class="text-slate-400 hover:text-red-500 bg-white dark:bg-slate-800 shadow-sm sm:shadow-none border border-slate-100 dark:border-slate-700 sm:border-0 p-2 rounded-xl transition-colors" title="Fshije">
+                                <i data-lucide="trash-2" class="w-4 h-4"></i>
                             </button>
                         </div>
                     </div>
@@ -1092,11 +1200,11 @@
 
             const disclaimer = document.getElementById('materialDisclaimer');
             if (price === 0.40) {
-                disclaimer.innerHTML = '<i data-lucide="info" class="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 shrink-0 text-amber-500"></i> <span>Kujdes: Ky opsion e mbulon <b>veç punën e dorës</b>. Ngjyra e materialet tjera i bini ju.</span>';
-                disclaimer.className = 'mt-3 sm:mt-4 text-[11px] sm:text-[13px] text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 p-3 sm:p-4 rounded-xl border border-amber-100 dark:border-amber-500/20 font-semibold flex items-start gap-2.5 sm:gap-3 transition-all';
+                disclaimer.innerHTML = '<i data-lucide="info" class="w-5 h-5 mt-0.5 shrink-0 text-amber-500"></i> <span>Kujdes: Ky opsion e mbulon <b>veç punën e dorës</b>. Ngjyra e materialet tjera i bini ju.</span>';
+                disclaimer.className = 'mt-4 text-[13px] text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 p-4 rounded-xl border border-amber-100 dark:border-amber-500/20 font-semibold flex items-start gap-3 transition-all';
             } else if (price === 0.50) {
-                disclaimer.innerHTML = '<i data-lucide="check-circle" class="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 shrink-0 text-green-500"></i> <span>Përfshihet: Punë dore + <b>Ngjyra kualitet LIKAcolor</b>. Super zgjidhje!</span>';
-                disclaimer.className = 'mt-3 sm:mt-4 text-[11px] sm:text-[13px] text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-500/10 p-3 sm:p-4 rounded-xl border border-green-100 dark:border-green-500/20 font-semibold flex items-start gap-2.5 sm:gap-3 transition-all';
+                disclaimer.innerHTML = '<i data-lucide="check-circle" class="w-5 h-5 mt-0.5 shrink-0 text-green-500"></i> <span>Përfshihet: Punë dore + <b>Ngjyra kualitet LIKAcolor</b>. Super zgjidhje!</span>';
+                disclaimer.className = 'mt-4 text-[13px] text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-500/10 p-4 rounded-xl border border-green-100 dark:border-green-500/20 font-semibold flex items-start gap-3 transition-all';
             }
             lucide.createIcons();
         }
@@ -1137,6 +1245,7 @@
             }
         ];
 
+        // Rregullim i dritarjes automatike në rast se pajisja rrotullohet / ndryshon madhësi
         window.addEventListener('resize', () => {
             if (tourActive) showTourStep();
         });
@@ -1144,9 +1253,12 @@
         function startTour() {
             currentTourStep = 0;
             tourActive = true;
+            
+            // Aktivizimi i modaliteteve
             document.getElementById('tourClickBlocker').classList.remove('hidden');
             document.getElementById('tourSpotlight').classList.remove('hidden');
             document.getElementById('tourTooltipPanel').classList.remove('hidden');
+            
             showTourStep();
         }
 
@@ -1160,35 +1272,45 @@
             const el = document.getElementById(step.id);
 
             if (el) {
+                // Pozita Absolute e elementit
                 const rect = el.getBoundingClientRect();
                 const absoluteTop = rect.top + window.scrollY;
                 const absoluteLeft = rect.left + window.scrollX;
                 
+                // Vendosja e scroll-it automatikisht (që elementi të jetë në pjesën e sipërme të ekranit)
+                // Offset prej rreth 30% e ekranit e bën atë ideal për të lënë hapsirë për Tooltip-in poshtë
                 const offset = window.innerHeight * 0.28;
                 window.scrollTo({ top: Math.max(0, absoluteTop - offset), behavior: 'smooth' });
 
                 const spotlight = document.getElementById('tourSpotlight');
-                const padding = window.innerWidth < 640 ? 8 : 12; 
                 
+                // Hapësirë mbrojtëse rreth elementit
+                const padding = 12; 
+                
+                // Animimi dhe Përshtatja e Spotlight (Dritares së Dritës)
                 spotlight.style.top = `${absoluteTop - padding}px`;
                 spotlight.style.left = `${absoluteLeft - padding}px`;
                 spotlight.style.width = `${rect.width + padding * 2}px`;
                 spotlight.style.height = `${rect.height + padding * 2}px`;
+                
+                // Lekundja dhe Zbutja e këndeve bazuar në madhësinë (katror i madh vs buton)
                 spotlight.style.borderRadius = rect.height > 100 ? '1.5rem' : '1.25rem';
 
+                // Përditësimi i përmbajtjes në Tooltip Karta
                 document.getElementById('tourTitle').textContent = step.title;
                 document.getElementById('tourDesc').textContent = step.desc;
                 document.getElementById('tourStepCount').textContent = `${currentTourStep + 1} / ${tourSteps.length}`;
 
                 const nextBtn = document.getElementById('tourNextBtn');
                 if (currentTourStep === tourSteps.length - 1) {
-                    nextBtn.innerHTML = 'Kuptova! <i data-lucide="check" class="w-4 h-4 sm:w-5 sm:h-5 ml-1"></i>';
+                    nextBtn.innerHTML = 'Kuptova! Gati për fillim <i data-lucide="check" class="w-5 h-5 ml-1"></i>';
                     nextBtn.classList.replace('from-accent', 'from-emerald-500');
                     nextBtn.classList.replace('hover:from-orange-500', 'hover:from-emerald-600');
                     nextBtn.classList.replace('to-orange-500', 'to-emerald-400');
                     nextBtn.classList.replace('hover:to-accent', 'hover:to-emerald-500');
                 } else {
-                    nextBtn.innerHTML = 'Vazhdo <i data-lucide="arrow-right" class="w-4 h-4 sm:w-5 sm:h-5 ml-1"></i>';
+                    nextBtn.innerHTML = 'Vazhdo <i data-lucide="arrow-right" class="w-5 h-5 ml-1"></i>';
+                    // Rivendosja e ngjyrave standarde
                     nextBtn.classList.add('from-accent', 'hover:from-orange-500', 'to-orange-500', 'hover:to-accent');
                     nextBtn.classList.remove('from-emerald-500', 'hover:from-emerald-600', 'to-emerald-400', 'hover:to-emerald-500');
                 }
@@ -1209,11 +1331,12 @@
             document.getElementById('tourTooltipPanel').classList.add('hidden');
         }
 
+        // Funksioni i shkarkimit (Download)
         function downloadInvoice() {
             if (rooms.length === 0 || editingId !== null) return;
             const btn = document.getElementById('downloadBtn');
             const orig = btn.innerHTML;
-            btn.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 sm:w-6 sm:h-6 animate-spin"></i> Po ruhet...';
+            btn.innerHTML = '<i data-lucide="loader-2" class="w-6 h-6 animate-spin"></i> Po ruhet...';
             lucide.createIcons();
 
             document.getElementById('printRef').textContent = document.getElementById('quoteRef').textContent;
@@ -1223,12 +1346,13 @@
             printRoomList.innerHTML = '';
             
             rooms.forEach(room => {
+                let txtDed = room.deductionArea > 0 ? `<br><span class="text-[10px] text-rose-500 bg-rose-50 px-1 py-0.5 rounded font-bold mt-1 inline-block">- ${room.deductionArea.toFixed(1)}m² dyer/dritare</span>` : '';
                 printRoomList.innerHTML += `
                     <tr class="border-b border-slate-100">
-                        <td class="py-4 pl-2 font-bold text-slate-800">${room.name}</td>
+                        <td class="py-4 pl-2 font-bold text-slate-800">${room.name} ${txtDed}</td>
                         <td class="py-4 text-slate-500 text-center font-mono font-bold">${room.w}m x ${room.l}m</td>
                         <td class="py-4 text-center font-bold text-slate-600">${room.incCeil ? '<span class="text-emerald-600 bg-emerald-50 px-2 py-1 rounded text-xs">Po</span>' : '<span class="text-slate-400">Jo</span>'}</td>
-                        <td class="py-4 text-right pr-2 font-black text-slate-900 text-base">${room.totalRoomArea.toFixed(1)} <span class="text-xs text-slate-400">m²</span></td>
+                        <td class="py-4 text-right pr-2 font-black text-slate-900 text-base">${room.totalArea.toFixed(1)} <span class="text-xs text-slate-400">m²</span></td>
                     </tr>
                 `;
             });
