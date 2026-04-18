@@ -127,7 +127,7 @@
     </a>
 
     <!-- Navigimi -->
-    <nav class="fixed w-full z-40 bg-white/80 dark:bg-slate-900/80 glass-panel shadow-sm border-b border-slate-200/50 dark:border-slate-800/50">
+    <header class="fixed w-full z-40 bg-white/80 dark:bg-slate-900/80 glass-panel shadow-sm border-b border-slate-200/50 dark:border-slate-800/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20 sm:h-24">
                 
@@ -144,7 +144,7 @@
                     </div>
                 </div>
 
-                <div class="hidden lg:flex items-center space-x-8">
+                <nav class="hidden lg:flex items-center space-x-8">
                     <a href="#" onclick="showMain()" class="text-slate-600 dark:text-slate-300 hover:text-accent font-bold text-sm uppercase tracking-wider transition-colors">Ballina</a>
                     <a href="#services" onclick="showMain()" class="text-slate-600 dark:text-slate-300 hover:text-accent font-bold text-sm uppercase tracking-wider transition-colors">Shërbimet</a>
                     <a href="#calculator" onclick="showMain()" class="text-slate-600 dark:text-slate-300 hover:text-accent font-bold text-sm uppercase tracking-wider transition-colors">Llogaritësi</a>
@@ -155,7 +155,7 @@
                     <button onclick="toggleDarkMode()" class="p-2.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-accent transition-all">
                         <i data-lucide="moon" id="themeIconDesktop" class="w-5 h-5"></i>
                     </button>
-                </div>
+                </nav>
 
                 <div class="lg:hidden flex items-center gap-2">
                     <button onclick="toggleDarkMode()" class="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
@@ -167,7 +167,7 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="fixed inset-0 z-50 bg-primary/95 dark:bg-slate-900/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col pt-24 px-8 pb-8">
@@ -183,7 +183,8 @@
     </div>
 
     <!-- PËRMBAJTJA KRYESORE (MAIN) -->
-    <div id="main-content">
+    <main id="main-content">
+        <!-- Seksioni Hero -->
         <section id="home" class="bg-hero min-h-screen flex items-center relative pt-24 overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
             
@@ -235,7 +236,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                     <!-- Service 1 (E VETMJA AKTIVE) -->
-                    <div class="bg-white dark:bg-slate-800 rounded-[2rem] shadow-xl overflow-hidden group border border-slate-100 dark:border-slate-700 flex flex-col relative hover:shadow-2xl hover:shadow-accent/10 transition-all">
+                    <article class="bg-white dark:bg-slate-800 rounded-[2rem] shadow-xl overflow-hidden group border border-slate-100 dark:border-slate-700 flex flex-col relative hover:shadow-2xl hover:shadow-accent/10 transition-all">
                         <div class="absolute top-5 right-5 bg-accent text-slate-900 text-[10px] sm:text-xs font-black px-3 py-1.5 rounded-xl z-20 shadow-lg uppercase tracking-wider">Aktiv</div>
                         <div class="relative h-56 sm:h-64 overflow-hidden">
                             <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent z-10"></div>
@@ -250,10 +251,10 @@
                         <div class="p-5 sm:p-6 flex-1 flex flex-col bg-white dark:bg-slate-800">
                             <p class="text-slate-500 dark:text-slate-400 text-sm mb-4 leading-relaxed flex-1 font-medium">Shërbim profesional i lyerjes. Përfshin opsionin e lëmimit me "Zhirafë" — makineri që lëmon murin 100% pa pluhur para lyerjes për një ambient perfekt dhe të pastër.</p>
                         </div>
-                    </div>
+                    </article>
                     
                     <!-- Service 2 (Blur) -->
-                    <div class="bg-white dark:bg-slate-800 rounded-[2rem] shadow-sm overflow-hidden border border-slate-100 dark:border-slate-700 flex flex-col relative pointer-events-none opacity-80">
+                    <article class="bg-white dark:bg-slate-800 rounded-[2rem] shadow-sm overflow-hidden border border-slate-100 dark:border-slate-700 flex flex-col relative pointer-events-none opacity-80">
                         <div class="absolute inset-0 z-30 bg-slate-900/40 backdrop-blur-[3px] flex items-center justify-center">
                             <div class="bg-primary/90 text-white text-xs font-black px-5 py-2.5 rounded-xl shadow-xl border border-white/10 uppercase tracking-widest backdrop-blur-md">Së shpejti</div>
                         </div>
@@ -270,10 +271,10 @@
                         <div class="p-5 sm:p-6 flex-1 flex flex-col bg-slate-50 dark:bg-slate-800/50">
                             <p class="text-slate-400 dark:text-slate-500 text-sm mb-4 leading-relaxed flex-1 font-medium">Lyerje e mureve të jashtme që ndihmon në përmirësimin e pamjes dhe mbrojtjen e fasadës nga shiu, dielli dhe lagështia duke përdorur materiale adekuate.</p>
                         </div>
-                    </div>
+                    </article>
 
                     <!-- Service 3 (Blur) -->
-                    <div class="bg-white dark:bg-slate-800 rounded-[2rem] shadow-sm overflow-hidden border border-slate-100 dark:border-slate-700 flex flex-col relative pointer-events-none opacity-80">
+                    <article class="bg-white dark:bg-slate-800 rounded-[2rem] shadow-sm overflow-hidden border border-slate-100 dark:border-slate-700 flex flex-col relative pointer-events-none opacity-80">
                         <div class="absolute inset-0 z-30 bg-slate-900/40 backdrop-blur-[3px] flex items-center justify-center">
                             <div class="bg-primary/90 text-white text-xs font-black px-5 py-2.5 rounded-xl shadow-xl border border-white/10 uppercase tracking-widest backdrop-blur-md">Së shpejti</div>
                         </div>
@@ -290,10 +291,10 @@
                         <div class="p-5 sm:p-6 flex-1 flex flex-col bg-slate-50 dark:bg-slate-800/50">
                             <p class="text-slate-400 dark:text-slate-500 text-sm mb-4 leading-relaxed flex-1 font-medium">Restaurim dhe lyerje e dyerve/kornizave prej druri apo metali. Ideale për rinovim të elementeve të vjetra pa pasur nevojë për t'i zëvendësuar ato.</p>
                         </div>
-                    </div>
+                    </article>
 
                     <!-- Service 4 (Blur) -->
-                    <div class="bg-white dark:bg-slate-800 rounded-[2rem] shadow-sm overflow-hidden border border-slate-100 dark:border-slate-700 flex flex-col relative pointer-events-none opacity-80">
+                    <article class="bg-white dark:bg-slate-800 rounded-[2rem] shadow-sm overflow-hidden border border-slate-100 dark:border-slate-700 flex flex-col relative pointer-events-none opacity-80">
                         <div class="absolute inset-0 z-30 bg-slate-900/40 backdrop-blur-[3px] flex items-center justify-center">
                             <div class="bg-primary/90 text-white text-xs font-black px-5 py-2.5 rounded-xl shadow-xl border border-white/10 uppercase tracking-widest backdrop-blur-md">Së shpejti</div>
                         </div>
@@ -310,7 +311,7 @@
                         <div class="p-5 sm:p-6 flex-1 flex flex-col bg-slate-50 dark:bg-slate-800/50">
                             <p class="text-slate-400 dark:text-slate-500 text-sm mb-4 leading-relaxed flex-1 font-medium">Shërbim për lyerjen dhe mbrojtjen e strukturave metalike si gardhe e porta, duke trajtuar ndryshkun dhe duke aplikuar ngjyrë për jetëgjatësi maksimale.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -728,8 +729,9 @@
             </div>
         </section>
 
-        <footer class="bg-slate-900 text-slate-400 py-12 sm:py-16 border-t border-slate-800">
-            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 text-center md:text-left">
+        <!-- Footer -->
+        <footer class="bg-slate-900 text-slate-400 pt-12 sm:pt-16 pb-8 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 text-center md:text-left mb-10 sm:mb-12">
                 <div class="flex flex-col items-center md:items-start">
                     <div class="text-2xl sm:text-3xl font-black text-white mb-2">LIKA<span class="text-accent">color</span>.</div>
                     <p class="text-sm">Partneri juaj më i besuar për lyerje hapësirash.</p>
@@ -742,15 +744,21 @@
                         <li>Prishtinë, Kosovë</li>
                     </ul>
                 </div>
-                <div>
-                    <p class="text-sm mt-4 sm:mt-8">&copy; <span id="year"></span> LIKAcolor.</p>
+                <div class="flex flex-col items-center md:items-start justify-center md:justify-end">
+                    <p class="text-sm mt-4 sm:mt-8">&copy; <span id="year"></span> LIKAcolor. Të gjitha të drejtat e rezervuara.</p>
                 </div>
             </div>
+            
+            <div class="border-t border-slate-800 mt-10 sm:mt-12 pt-6 sm:pt-8 flex justify-center">
+                <p class="text-xs sm:text-sm text-slate-500 font-medium tracking-wide">
+                    MADE WITH ❤️ <a href="https://www.likaapps.com" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-orange-400 transition-colors font-black">LIKA</a>.
+                </p>
+            </div>
         </footer>
-    </div>
+    </main>
 
     <!-- PËRMBAJTJA E OFERTAVE TË GATSHME -->
-    <div id="packages-content" class="hidden min-h-screen bg-slate-50 dark:bg-slate-900 pt-20 sm:pt-28 pb-16 sm:pb-20 relative">
+    <section id="packages-content" class="hidden min-h-screen bg-slate-50 dark:bg-slate-900 pt-20 sm:pt-28 pb-16 sm:pb-20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             
             <div class="flex justify-between items-center mb-6 sm:mb-8">
@@ -858,7 +866,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Modal Për Informacione / Shpjegime -->
     <div id="infoModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 transition-opacity">
@@ -909,8 +917,8 @@
         </div>
     </div>
 
-    <!-- Shablloni Printimit (I fshehur) -->
-    <div id="print-export-container" class="fixed -left-[9999px] top-0 bg-white w-[900px] p-0 font-sans shadow-none text-slate-800 relative overflow-hidden">
+    <!-- Shablloni Printimit (I fshehur me Absolute per te mos ndikuar ne scroll) -->
+    <div id="print-export-container" class="absolute -left-[9999px] top-0 bg-white w-[900px] p-0 font-sans shadow-none text-slate-800 overflow-hidden pointer-events-none z-[-10]">
         <div class="w-full h-2 bg-amber-500"></div>
         <div class="px-16 py-12">
             <div class="flex justify-between items-center mb-12 border-b border-slate-200 pb-8">
@@ -1001,37 +1009,87 @@
         </div>
     </div>
 
+    <!-- SCRIPT SEKSIONI (I organizuar dhe strukturuar) -->
     <script>
+        // Inicializimi i ikonave
         lucide.createIcons();
+
+        // ==========================================
+        // 1. STATE & CONFIGURIMI
+        // ==========================================
+        let rooms = [];
+        let editingId = null;
+        let hasAskedInitialArea = false;
+        let initialHouseArea = 0; 
+        
+        const dimStandarde = {
+            "Sallon": { w: 4.0, l: 5.0, h: 2.5 },
+            "Dhomë Gjumi": { w: 3.5, l: 4.0, h: 2.5 },
+            "Kuzhinë": { w: 3.0, l: 4.0, h: 2.5 },
+            "Korridor": { w: 1.5, l: 4.0, h: 2.5 },
+            "Banjo": { w: 2.0, l: 2.5, h: 2.5 },
+        };
+
+        const addonInfos = {
+            'location': {
+                title: 'Zbritja e Lokacionit',
+                desc: 'Ne ofrojmë shërbimet tona në mbarë Kosovën me çmime super standarde. Megjithatë, për shkak të afërsisë me zyrën tonë qendrore dhe shpenzimeve dukshëm më të vogla të transportit, ne ofrojmë ZBRITJE speciale automatike për klientët nga Prishtina, Fushë Kosova dhe Obiliqi! Ky kursim i yni ndahet drejtpërdrejtë me ju.'
+            },
+            'premium': {
+                title: 'Ngjyrë që pastrohet lehtë',
+                desc: 'Ne përdorim ngjyra llastiku (akrilike) të një cilësie mjaft të lartë. Nëse muri bëhet pis ose me njolla nga përditshmëria, mund ta pastroni plotësisht dhe lehtësisht me një leckë të lagur pa e prishur ngjyrën. Është zgjidhje ideale dhe e patjetërsueshme për familjet me fëmijë apo sallone!'
+            },
+            'aroma': {
+                title: 'Aromë e Shtëpisë',
+                desc: 'A e dini atë erën e rëndë të kimikateve pas lyerjes? Ne e eliminojmë atë! I shtojmë ngjyrës një ekstrakt aromatik natyral special. Menjëherë pas lyerjes shtëpia juaj do të ketë një aromë të freskët dhe shumë të këndshme.'
+            },
+            'sander': {
+                title: 'Lëmim me Zhirafë (Sander)',
+                desc: 'Procesi i lëmimit të mureve bëhet me makinerinë profesionale të quajtur "Zhirafë" e cila është e lidhur direkt me thithëse (sistem vakuumi). Kjo na siguron një mur jashtëzakonisht të rrafshët dhe mbi të gjitha ofron një ambient 100% PA PLUHUR nëpër shtëpinë tuaj. S\'ka më pluhur nëpër mobilje!'
+            }
+        };
+
         const delay = ms => new Promise(res => setTimeout(res, ms));
 
-        function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('translate-x-full');
-        }
 
-        function showPackages() {
-            document.getElementById('main-content').classList.add('hidden');
-            document.getElementById('packages-content').classList.remove('hidden');
-            window.scrollTo(0, 0);
-        }
-
-        function showMain() {
-            document.getElementById('packages-content').classList.add('hidden');
-            document.getElementById('main-content').classList.remove('hidden');
-        }
-
-        function toggleDarkMode() {
-            document.documentElement.classList.toggle('dark');
-            const isDark = document.documentElement.classList.contains('dark');
-            const icon = isDark ? 'sun' : 'moon';
-            document.getElementById('themeIconDesktop').setAttribute('data-lucide', icon);
-            document.getElementById('themeIconMobile').setAttribute('data-lucide', icon);
-            lucide.createIcons();
-        }
-
-        // Jackpot Animated Headline Text
+        // ==========================================
+        // 2. INITIALIZATION (DOM Ready)
+        // ==========================================
         document.addEventListener('DOMContentLoaded', () => {
+            // Animacioni i Hero Tekstit
+            initSlotAnimation();
+
+            // Setup per datat dhe vitin aktual
+            const d = new Date();
+            document.getElementById('invoiceDate').textContent = `${String(d.getDate()).padStart(2, '0')}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getFullYear()).slice(-2)}`;
+            document.getElementById('year').textContent = d.getFullYear();
+            document.getElementById('quoteRef').textContent = 'OFT-' + Math.floor(10000 + Math.random() * 90000);
+
+            // Logjika e butonave "+" dhe "-" qe mbahen shtypur
+            initHoldButtons();
+            
+            // Perzgjedhja fillestare e pakos
+            handlePackageChange();
+
+            // Observer per te pyetur per metrat kur arrin tek kalkulatori
+            const calcSection = document.getElementById('calculator');
+            if (calcSection) {
+                const calcObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !hasAskedInitialArea) {
+                            checkInitialArea();
+                        }
+                    });
+                }, { threshold: 0.3 }); 
+                calcObserver.observe(calcSection);
+            }
+        });
+
+
+        // ==========================================
+        // 3. UI & NAVIGIMI & ANIMACIONET
+        // ==========================================
+        function initSlotAnimation() {
             const words = ["Dhomave tuaja.", "Sallonit tuaj.", "Shtëpisë suaj.", "Hapësirave tuaja.", "Lokalit tuaj.", "Dhomave tuaja."];
             const slotContainer = document.getElementById('slotContainer');
             
@@ -1059,242 +1117,32 @@
                     }
                 }, 2200);
             }
-        });
-
-        const d = new Date();
-        document.getElementById('invoiceDate').textContent = `${String(d.getDate()).padStart(2, '0')}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getFullYear()).slice(-2)}`;
-        document.getElementById('year').textContent = d.getFullYear();
-        document.getElementById('quoteRef').textContent = 'OFT-' + Math.floor(10000 + Math.random() * 90000);
-
-        // State Variables
-        let rooms = [];
-        let editingId = null;
-        let hasAskedInitialArea = false;
-        let initialHouseArea = 0; 
-        const dimStandarde = {
-            "Sallon": { w: 4.0, l: 5.0, h: 2.5 },
-            "Dhomë Gjumi": { w: 3.5, l: 4.0, h: 2.5 },
-            "Kuzhinë": { w: 3.0, l: 4.0, h: 2.5 },
-            "Korridor": { w: 1.5, l: 4.0, h: 2.5 },
-            "Banjo": { w: 2.0, l: 2.5, h: 2.5 },
-        };
-
-        function checkInitialArea() {
-            if (!hasAskedInitialArea) {
-                openHouseAreaModal();
-            }
-        }
-        
-        function openHouseAreaModal() {
-            hasAskedInitialArea = true; 
-            const modal = document.getElementById('houseAreaModal');
-            if(initialHouseArea > 0) {
-                document.getElementById('initialHouseAreaInput').value = initialHouseArea;
-            }
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            setTimeout(() => {
-                document.getElementById('initialHouseAreaInput').focus();
-            }, 100);
         }
 
-        function saveHouseArea() {
-            const val = parseFloat(document.getElementById('initialHouseAreaInput').value);
-            if (val > 0) {
-                initialHouseArea = val;
-                const modal = document.getElementById('houseAreaModal');
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                
-                updatePriceAndRender();
-
-                if(rooms.length > 0) {
-                    testAccuracy();
-                }
-            } else {
-                alert("Ju lutem shënoni një vlerë m² të saktë ose klikoni Kërce.");
-            }
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('translate-x-full');
         }
 
-        function skipHouseArea() {
-            initialHouseArea = -1;
-            const modal = document.getElementById('houseAreaModal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            updatePriceAndRender();
+        function showPackages() {
+            document.getElementById('main-content').classList.add('hidden');
+            document.getElementById('packages-content').classList.remove('hidden');
+            window.scrollTo(0, 0);
         }
 
-        function testAccuracy() {
-            if (rooms.length === 0) return;
-            
-            if (initialHouseArea <= 0) {
-                openHouseAreaModal();
-                return;
-            }
+        function showMain() {
+            document.getElementById('packages-content').classList.add('hidden');
+            document.getElementById('main-content').classList.remove('hidden');
+        }
 
-            let tFloor = 0;
-            let tWall = 0;
-            let tDed = 0;
-
-            rooms.forEach(r => {
-                tFloor += r.floorArea;
-                tWall += r.wallArea;
-                tDed += r.dedArea;
-            });
-
-            const percent = (tFloor / initialHouseArea) * 100;
-            let statusClass = "";
-            let statusText = "";
-            let warningText = "";
-            let icon = "";
-            let barColor = "";
-            let barExpl = "";
-
-            if (percent >= 75 && percent <= 100) {
-                statusClass = "text-emerald-500 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-200 dark:border-emerald-700/30";
-                statusText = "Llogaritje Përfekte & Reale!";
-                warningText = "Llogaritja juaj duket absolutisht e saktë! Sipërfaqja e dyshemesë së dhomave përputhet logjikisht me shtëpinë tuaj (rreth 15-25% shkon për mure ndarëse apo korridore të vogla). Mund të vazhdoni i sigurt me këtë ofertë.";
-                icon = "check-circle";
-                barColor = "bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.6)]";
-                barExpl = "Përputhshmëri e shkëlqyer me hapësirën reale!";
-            } else if (percent < 75) {
-                statusClass = "text-amber-500 bg-amber-50 dark:bg-amber-500/10 border-amber-200 dark:border-amber-700/30";
-                statusText = "Llogaritje e Pjesshme";
-                warningText = `Keni llogaritur vetëm një pjesë të shtëpisë (${tFloor.toFixed(1)}m² nga ${initialHouseArea}m²). Nëse po lyeni vetëm disa dhoma, kjo është në rregull. Por nëse dëshironi ta lyeni komplet, ju mungojnë dhoma të tjera për t'i shtuar.`;
-                icon = "alert-triangle";
-                barColor = "bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.6)]";
-                barExpl = "Po llogarisni vetëm një pjesë të hapësirës së shtëpisë.";
-            } else if (percent > 100) {
-                statusClass = "text-rose-500 bg-rose-50 dark:bg-rose-500/10 border-rose-200 dark:border-rose-700/30";
-                statusText = "Sipërfaqe e Tejkaluar!";
-                warningText = `Kujdes! Keni shtuar dhoma me sipërfaqe (${tFloor.toFixed(1)}m²) më të madhe se vetë shtëpia juaj (${initialHouseArea}m²). Ekziston mundësia që keni shkruar dimensionet gabim.`;
-                icon = "x-circle";
-                barColor = "bg-rose-500 shadow-[0_0_10px_rgba(244,63,94,0.6)]";
-                barExpl = "Po llogarisni më shumë m² sesa ka shtëpia realisht!";
-            }
-
-            const clampedWidth = Math.min(percent, 100);
-
-            const progressBarHtml = `
-                <div class="mb-6 p-4 sm:p-5 bg-slate-50 dark:bg-slate-800/80 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm relative overflow-hidden">
-                    <div class="flex justify-between items-end mb-3 relative z-10">
-                        <span class="text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300 flex items-center gap-1.5"><i data-lucide="bar-chart-2" class="w-4 h-4 text-slate-400"></i> Mbulueshmëria e dhomave ndaj shtëpisë</span>
-                        <span class="text-sm font-black text-slate-800 dark:text-white">${percent.toFixed(0)}%</span>
-                    </div>
-                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2.5 sm:h-3 overflow-hidden relative z-10">
-                        <div class="${barColor} h-full rounded-full transition-all duration-1000 ease-out" style="width: 0%;" id="animatedProgressBar" data-target-width="${clampedWidth}%"></div>
-                    </div>
-                    <div class="flex justify-between text-[9px] sm:text-[10px] text-slate-400 font-bold mt-1.5 px-1 relative z-10 uppercase tracking-wider">
-                        <span>0%</span>
-                        <span class="${percent > 100 ? 'text-rose-500' : ''}">Limiti 100%</span>
-                    </div>
-                    <div class="mt-3 text-[11px] sm:text-xs font-medium text-slate-500 dark:text-slate-400 relative z-10 bg-white dark:bg-slate-900 p-2.5 rounded-xl border border-slate-100 dark:border-slate-700/50">
-                        ${barExpl}
-                    </div>
-                </div>
-            `;
-
-            let actionButtonsHtml = '';
-            if (percent < 75 || percent > 100) {
-                actionButtonsHtml = `
-                    <div class="flex flex-col sm:flex-row gap-3 mt-4 w-full">
-                        <button onclick="closeAccuracyModal(); openHouseAreaModal();" class="flex-1 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 hover:border-slate-300 text-slate-700 dark:text-white font-bold py-3 rounded-xl transition-all text-xs sm:text-sm flex items-center justify-center gap-2">
-                            <i data-lucide="edit-3" class="w-4 h-4"></i> Ndrysho m² e shtëpisë
-                        </button>
-                        <button onclick="closeAccuracyModal()" class="flex-1 bg-accent/10 hover:bg-accent/20 border-2 border-transparent text-accent font-black py-3 rounded-xl transition-all text-xs sm:text-sm flex items-center justify-center gap-2">
-                            <i data-lucide="plus-circle" class="w-4 h-4"></i> ${percent > 100 ? 'Rishiko Dhomat' : 'Përmirëso / Shto Dhoma'}
-                        </button>
-                    </div>
-                `;
-            }
-
-            let html = progressBarHtml + `
-                <div class="flex items-start sm:items-center gap-4 p-4 sm:p-5 rounded-2xl border ${statusClass} mb-6">
-                    <div class="p-2 sm:p-2.5 bg-white dark:bg-slate-800 rounded-full shadow-sm flex-shrink-0">
-                        <i data-lucide="${icon}" class="w-6 h-6 sm:w-7 sm:h-7"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h5 class="font-black text-lg sm:text-xl leading-none mb-1.5">${statusText}</h5>
-                        <p class="text-xs sm:text-sm font-medium opacity-90 leading-relaxed">${warningText}</p>
-                        ${actionButtonsHtml}
-                    </div>
-                </div>
-
-                <div class="space-y-2.5 sm:space-y-3 text-sm text-slate-600 dark:text-slate-300">
-                    <div class="flex justify-between items-center bg-slate-50 dark:bg-slate-800/50 p-3 sm:p-3.5 rounded-xl border border-slate-100 dark:border-slate-700/50">
-                        <span class="font-semibold">Shtëpia që deklaruat:</span>
-                        <span class="font-black text-slate-900 dark:text-white">${initialHouseArea} m²</span>
-                    </div>
-                    <div class="flex justify-between items-center bg-slate-50 dark:bg-slate-800/50 p-3 sm:p-3.5 rounded-xl border border-slate-100 dark:border-slate-700/50">
-                        <span class="font-semibold">Dyshemeja e mbledhur nga dhomat:</span>
-                        <span class="font-black text-slate-900 dark:text-white">${tFloor.toFixed(1)} m²</span>
-                    </div>
-                    <div class="flex justify-between items-center bg-emerald-50 dark:bg-emerald-500/10 p-3 sm:p-3.5 rounded-xl text-emerald-700 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-800/30">
-                        <span class="font-semibold">Zbritjet e sakta (Dyer / Dritare):</span>
-                        <span class="font-black">-${tDed.toFixed(1)} m²</span>
-                    </div>
-                </div>
-
-                <div class="mt-6 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 shadow-inner">
-                    <h6 class="font-black text-slate-800 dark:text-white uppercase tracking-widest text-[10px] sm:text-xs mb-3 flex items-center gap-2">
-                        <div class="bg-accent/20 p-1.5 rounded-md"><i data-lucide="calculator" class="w-4 h-4 text-accent"></i></div>
-                        Formula e Transparencës (Si llogarisim?)
-                    </h6>
-                    <p class="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-medium mb-4">
-                        Ne aplikojmë një model matematikor strikt për të garantuar që ju paguani <strong class="text-emerald-600 dark:text-emerald-500">vetëm për sipërfaqen reale</strong> që lyhet:
-                    </p>
-                    <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-100 dark:border-slate-800 font-mono text-[10px] sm:text-xs text-slate-700 dark:text-slate-300 mb-4 shadow-sm">
-                        <div class="mb-2"><span class="text-slate-400">1. Perimetri =</span> 2 × (Gjerësi + Gjatësi)</div>
-                        <div class="mb-2"><span class="text-slate-400">2. Bruto Mure =</span> Perimetri × Lartësi</div>
-                        <div class="mb-2"><span class="text-slate-400">3. Zbritjet =</span> (Dyer m²) + (Dritare m²)</div>
-                        <div class="font-bold text-accent border-t border-slate-100 dark:border-slate-800 pt-2 mt-2">
-                            Sipërfaqja Neto = Bruto Mure - Zbritjet
-                        </div>
-                    </div>
-                    <p class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
-                        <strong class="text-slate-700 dark:text-slate-200">Shembull praktik:</strong> Për një dhomë 4m×5m (Lartësia 2.5m), perimetri është 18m. Sipërfaqja bruto bëhet 45m² (18×2.5). Ne zbresim saktësisht hapësirat boshe (psh. 1 derë 2m² + 1 dritare 1.5m² = 3.5m²). Sipërfaqja që faturoni është <strong class="text-slate-800 dark:text-white">41.5m²</strong>. Ne nuk ju tarifojmë asnjë cent për hapësirat që nuk lyhen!
-                    </p>
-                </div>
-            `;
-
-            document.getElementById('accuracyContent').innerHTML = html;
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            const icon = isDark ? 'sun' : 'moon';
+            document.getElementById('themeIconDesktop').setAttribute('data-lucide', icon);
+            document.getElementById('themeIconMobile').setAttribute('data-lucide', icon);
             lucide.createIcons();
-            const modal = document.getElementById('accuracyModal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-
-            setTimeout(() => {
-                const bar = document.getElementById('animatedProgressBar');
-                if (bar) {
-                    bar.style.width = bar.getAttribute('data-target-width');
-                }
-            }, 100);
         }
-
-        function closeAccuracyModal() {
-            const modal = document.getElementById('accuracyModal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-        }
-
-        const addonInfos = {
-            'location': {
-                title: 'Zbritja e Lokacionit',
-                desc: 'Ne ofrojmë shërbimet tona në mbarë Kosovën me çmime super standarde. Megjithatë, për shkak të afërsisë me zyrën tonë qendrore dhe shpenzimeve dukshëm më të vogla të transportit, ne ofrojmë ZBRITJE speciale automatike për klientët nga Prishtina, Fushë Kosova dhe Obiliqi! Ky kursim i yni ndahet drejtpërdrejtë me ju.'
-            },
-            'premium': {
-                title: 'Ngjyrë që pastrohet lehtë',
-                desc: 'Ne përdorim ngjyra llastiku (akrilike) të një cilësie mjaft të lartë. Nëse muri bëhet pis ose me njolla nga përditshmëria, mund ta pastroni plotësisht dhe lehtësisht me një leckë të lagur pa e prishur ngjyrën. Është zgjidhje ideale dhe e patjetërsueshme për familjet me fëmijë apo sallone!'
-            },
-            'aroma': {
-                title: 'Aromë e Shtëpisë',
-                desc: 'A e dini atë erën e rëndë të kimikateve pas lyerjes? Ne e eliminojmë atë! I shtojmë ngjyrës një ekstrakt aromatik natyral special. Menjëherë pas lyerjes shtëpia juaj do të ketë një aromë të freskët dhe shumë të këndshme.'
-            },
-            'sander': {
-                title: 'Lëmim me Zhirafë (Sander)',
-                desc: 'Procesi i lëmimit të mureve bëhet me makinerinë profesionale të quajtur "Zhirafë" e cila është e lidhur direkt me thithëse (sistem vakuumi). Kjo na siguron një mur jashtëzakonisht të rrafshët dhe mbi të gjitha ofron një ambient 100% PA PLUHUR nëpër shtëpinë tuaj. S\'ka më pluhur nëpër mobilje!'
-            }
-        };
 
         function showInfo(type) {
             document.getElementById('infoTitle').textContent = addonInfos[type].title;
@@ -1310,6 +1158,78 @@
             modal.classList.remove('flex');
         }
 
+        function scrollToLocation() {
+            const locEl = document.getElementById('tour-location');
+            if(locEl) {
+                locEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                locEl.classList.add('ring-4', 'ring-emerald-500', 'ring-offset-2', 'dark:ring-offset-slate-900', 'transition-shadow', 'duration-500');
+                setTimeout(() => {
+                    locEl.classList.remove('ring-4', 'ring-emerald-500', 'ring-offset-2', 'dark:ring-offset-slate-900');
+                }, 2500);
+            }
+        }
+
+
+        // ==========================================
+        // 4. LOGJIKA E INPUTEVE DHE KONTROLLEVE
+        // ==========================================
+        let holdTimer;
+        let holdInterval;
+
+        function initHoldButtons() {
+            document.querySelectorAll('.hold-btn').forEach(btn => {
+                const id = btn.dataset.target;
+                const amt = parseFloat(btn.dataset.amt);
+
+                const start = (e) => {
+                    e.preventDefault(); 
+                    stopHold(); 
+                    startHold(id, amt);
+                };
+                const stop = (e) => {
+                    e.preventDefault();
+                    stopHold();
+                };
+
+                btn.addEventListener('mousedown', start);
+                btn.addEventListener('touchstart', start, {passive: false});
+                btn.addEventListener('mouseup', stop);
+                btn.addEventListener('mouseleave', stop);
+                btn.addEventListener('touchend', stop);
+            });
+        }
+
+        function startHold(id, amt) {
+            adjustValue(id, amt); 
+            holdTimer = setTimeout(() => {
+                holdInterval = setInterval(() => adjustValue(id, amt), 120); 
+            }, 350); 
+        }
+
+        function stopHold() {
+            clearTimeout(holdTimer);
+            clearInterval(holdInterval);
+        }
+
+        function adjustValue(id, amt) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            
+            if (['doorCount', 'windowCount'].includes(id)) {
+                let v = parseInt(el.value) || 0;
+                v = Math.max(0, v + amt);
+                el.value = v;
+            } else {
+                let v = parseFloat(el.value) || 0;
+                v = Math.max(0, v + amt);
+                el.value = (v === 0 && amt < 0) ? '' : v.toFixed(1);
+            }
+        }
+
+
+        // ==========================================
+        // 5. KALKULATORI DHE DHOMAT
+        // ==========================================
         function getSelectedPackagePrice() {
             const radios = document.getElementsByName('servicePackage');
             for (let i = 0; i < radios.length; i++) {
@@ -1347,73 +1267,6 @@
                 wrapEl.classList.add('border-rose-300', 'dark:border-rose-500/50');
             }
         }
-
-        let holdTimer;
-        let holdInterval;
-
-        function startHold(id, amt) {
-            adjustValue(id, amt); 
-            holdTimer = setTimeout(() => {
-                holdInterval = setInterval(() => adjustValue(id, amt), 120); 
-            }, 350); 
-        }
-
-        function stopHold() {
-            clearTimeout(holdTimer);
-            clearInterval(holdInterval);
-        }
-
-        function adjustValue(id, amt) {
-            const el = document.getElementById(id);
-            if (!el) return;
-            
-            if (['doorCount', 'windowCount'].includes(id)) {
-                let v = parseInt(el.value) || 0;
-                v = Math.max(0, v + amt);
-                el.value = v;
-            } else {
-                let v = parseFloat(el.value) || 0;
-                v = Math.max(0, v + amt);
-                el.value = (v === 0 && amt < 0) ? '' : v.toFixed(1);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.hold-btn').forEach(btn => {
-                const id = btn.dataset.target;
-                const amt = parseFloat(btn.dataset.amt);
-
-                const start = (e) => {
-                    e.preventDefault(); 
-                    stopHold(); 
-                    startHold(id, amt);
-                };
-                const stop = (e) => {
-                    e.preventDefault();
-                    stopHold();
-                };
-
-                btn.addEventListener('mousedown', start);
-                btn.addEventListener('touchstart', start, {passive: false});
-                btn.addEventListener('mouseup', stop);
-                btn.addEventListener('mouseleave', stop);
-                btn.addEventListener('touchend', stop);
-            });
-            
-            handlePackageChange();
-
-            const calcSection = document.getElementById('calculator');
-            if (calcSection) {
-                const calcObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting && !hasAskedInitialArea) {
-                            checkInitialArea();
-                        }
-                    });
-                }, { threshold: 0.3 }); 
-                calcObserver.observe(calcSection);
-            }
-        });
 
         function applyPreset(dhoma) {
             if (editingId) return;
@@ -1721,7 +1574,6 @@
 
             if (hasDiscountLocation) {
                 if (preDiscountTotal > 100) {
-                    // Ka përfituar zbritjen
                     locRow.classList.remove('hidden');
                     document.getElementById('calcLocationDiscountPrice').innerHTML = `-${locationDiscount.toFixed(2)} €`;
                     
@@ -1736,7 +1588,6 @@
                     discountProgressContainer.classList.add('hidden');
                     discountProgressContainer.classList.remove('flex');
                 } else {
-                    // Është në proces për të arritur 100€
                     locRow.classList.add('hidden');
                     originalTotalEl.classList.add('hidden');
                     discountBadgeEl.classList.add('hidden');
@@ -1747,7 +1598,7 @@
                         discountProgressContainer.classList.add('flex');
                         
                         let percent = Math.min(99, Math.floor((preDiscountTotal / 100) * 100)); // Limit në 99%
-                        let missingEuro = 100 - preDiscountTotal; // Kalkulimi ne EURO e jo ne %
+                        let missingEuro = 100 - preDiscountTotal; 
                         
                         let textDesc = missingEuro > 0 ? `Shto edhe ${missingEuro.toFixed(2)}€` : "Gati për zbritje!";
                         
@@ -1759,7 +1610,6 @@
                     }
                 }
             } else {
-                // Nuk është qytet me zbritje
                 locRow.classList.add('hidden');
                 originalTotalEl.classList.add('hidden');
                 discountBadgeEl.classList.add('hidden');
@@ -1778,18 +1628,204 @@
             lucide.createIcons();
         }
 
-        function scrollToLocation() {
-            const locEl = document.getElementById('tour-location');
-            if(locEl) {
-                locEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                locEl.classList.add('ring-4', 'ring-emerald-500', 'ring-offset-2', 'dark:ring-offset-slate-900', 'transition-shadow', 'duration-500');
-                setTimeout(() => {
-                    locEl.classList.remove('ring-4', 'ring-emerald-500', 'ring-offset-2', 'dark:ring-offset-slate-900');
-                }, 2500);
+        // ==========================================
+        // 6. LLOGARITJA E SIPËRFAQES (ACCURACY)
+        // ==========================================
+        function checkInitialArea() {
+            if (!hasAskedInitialArea) {
+                openHouseAreaModal();
+            }
+        }
+        
+        function openHouseAreaModal() {
+            hasAskedInitialArea = true; 
+            const modal = document.getElementById('houseAreaModal');
+            if(initialHouseArea > 0) {
+                document.getElementById('initialHouseAreaInput').value = initialHouseArea;
+            }
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => {
+                document.getElementById('initialHouseAreaInput').focus();
+            }, 100);
+        }
+
+        function saveHouseArea() {
+            const val = parseFloat(document.getElementById('initialHouseAreaInput').value);
+            if (val > 0) {
+                initialHouseArea = val;
+                const modal = document.getElementById('houseAreaModal');
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                
+                updatePriceAndRender();
+
+                if(rooms.length > 0) {
+                    testAccuracy();
+                }
+            } else {
+                alert("Ju lutem shënoni një vlerë m² të saktë ose klikoni Kërce.");
             }
         }
 
-        // --- Tour Logic ---
+        function skipHouseArea() {
+            initialHouseArea = -1;
+            const modal = document.getElementById('houseAreaModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            updatePriceAndRender();
+        }
+
+        function testAccuracy() {
+            if (rooms.length === 0) return;
+            
+            if (initialHouseArea <= 0) {
+                openHouseAreaModal();
+                return;
+            }
+
+            let tFloor = 0, tWall = 0, tDed = 0;
+
+            rooms.forEach(r => {
+                tFloor += r.floorArea;
+                tWall += r.wallArea;
+                tDed += r.dedArea;
+            });
+
+            const percent = (tFloor / initialHouseArea) * 100;
+            let statusClass = "", statusText = "", warningText = "", icon = "", barColor = "", barExpl = "";
+
+            if (percent >= 75 && percent <= 100) {
+                statusClass = "text-emerald-500 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-200 dark:border-emerald-700/30";
+                statusText = "Llogaritje Përfekte & Reale!";
+                warningText = "Llogaritja juaj duket absolutisht e saktë! Sipërfaqja e dyshemesë së dhomave përputhet logjikisht me shtëpinë tuaj (rreth 15-25% shkon për mure ndarëse apo korridore të vogla). Mund të vazhdoni i sigurt me këtë ofertë.";
+                icon = "check-circle";
+                barColor = "bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.6)]";
+                barExpl = "Përputhshmëri e shkëlqyer me hapësirën reale!";
+            } else if (percent < 75) {
+                statusClass = "text-amber-500 bg-amber-50 dark:bg-amber-500/10 border-amber-200 dark:border-amber-700/30";
+                statusText = "Llogaritje e Pjesshme";
+                warningText = `Keni llogaritur vetëm një pjesë të shtëpisë (${tFloor.toFixed(1)}m² nga ${initialHouseArea}m²). Nëse po lyeni vetëm disa dhoma, kjo është në rregull. Por nëse dëshironi ta lyeni komplet, ju mungojnë dhoma të tjera për t'i shtuar.`;
+                icon = "alert-triangle";
+                barColor = "bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.6)]";
+                barExpl = "Po llogarisni vetëm një pjesë të hapësirës së shtëpisë.";
+            } else if (percent > 100) {
+                statusClass = "text-rose-500 bg-rose-50 dark:bg-rose-500/10 border-rose-200 dark:border-rose-700/30";
+                statusText = "Sipërfaqe e Tejkaluar!";
+                warningText = `Kujdes! Keni shtuar dhoma me sipërfaqe (${tFloor.toFixed(1)}m²) më të madhe se vetë shtëpia juaj (${initialHouseArea}m²). Ekziston mundësia që keni shkruar dimensionet gabim.`;
+                icon = "x-circle";
+                barColor = "bg-rose-500 shadow-[0_0_10px_rgba(244,63,94,0.6)]";
+                barExpl = "Po llogarisni më shumë m² sesa ka shtëpia realisht!";
+            }
+
+            const clampedWidth = Math.min(percent, 100);
+
+            const progressBarHtml = `
+                <div class="mb-6 p-4 sm:p-5 bg-slate-50 dark:bg-slate-800/80 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm relative overflow-hidden">
+                    <div class="flex justify-between items-end mb-3 relative z-10">
+                        <span class="text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300 flex items-center gap-1.5"><i data-lucide="bar-chart-2" class="w-4 h-4 text-slate-400"></i> Mbulueshmëria e dhomave ndaj shtëpisë</span>
+                        <span class="text-sm font-black text-slate-800 dark:text-white">${percent.toFixed(0)}%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2.5 sm:h-3 overflow-hidden relative z-10">
+                        <div class="${barColor} h-full rounded-full transition-all duration-1000 ease-out" style="width: 0%;" id="animatedProgressBar" data-target-width="${clampedWidth}%"></div>
+                    </div>
+                    <div class="flex justify-between text-[9px] sm:text-[10px] text-slate-400 font-bold mt-1.5 px-1 relative z-10 uppercase tracking-wider">
+                        <span>0%</span>
+                        <span class="${percent > 100 ? 'text-rose-500' : ''}">Limiti 100%</span>
+                    </div>
+                    <div class="mt-3 text-[11px] sm:text-xs font-medium text-slate-500 dark:text-slate-400 relative z-10 bg-white dark:bg-slate-900 p-2.5 rounded-xl border border-slate-100 dark:border-slate-700/50">
+                        ${barExpl}
+                    </div>
+                </div>
+            `;
+
+            let actionButtonsHtml = '';
+            if (percent < 75 || percent > 100) {
+                actionButtonsHtml = `
+                    <div class="flex flex-col sm:flex-row gap-3 mt-4 w-full">
+                        <button onclick="closeAccuracyModal(); openHouseAreaModal();" class="flex-1 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 hover:border-slate-300 text-slate-700 dark:text-white font-bold py-3 rounded-xl transition-all text-xs sm:text-sm flex items-center justify-center gap-2">
+                            <i data-lucide="edit-3" class="w-4 h-4"></i> Ndrysho m² e shtëpisë
+                        </button>
+                        <button onclick="closeAccuracyModal()" class="flex-1 bg-accent/10 hover:bg-accent/20 border-2 border-transparent text-accent font-black py-3 rounded-xl transition-all text-xs sm:text-sm flex items-center justify-center gap-2">
+                            <i data-lucide="plus-circle" class="w-4 h-4"></i> ${percent > 100 ? 'Rishiko Dhomat' : 'Përmirëso / Shto Dhoma'}
+                        </button>
+                    </div>
+                `;
+            }
+
+            let html = progressBarHtml + `
+                <div class="flex items-start sm:items-center gap-4 p-4 sm:p-5 rounded-2xl border ${statusClass} mb-6">
+                    <div class="p-2 sm:p-2.5 bg-white dark:bg-slate-800 rounded-full shadow-sm flex-shrink-0">
+                        <i data-lucide="${icon}" class="w-6 h-6 sm:w-7 sm:h-7"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h5 class="font-black text-lg sm:text-xl leading-none mb-1.5">${statusText}</h5>
+                        <p class="text-xs sm:text-sm font-medium opacity-90 leading-relaxed">${warningText}</p>
+                        ${actionButtonsHtml}
+                    </div>
+                </div>
+
+                <div class="space-y-2.5 sm:space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                    <div class="flex justify-between items-center bg-slate-50 dark:bg-slate-800/50 p-3 sm:p-3.5 rounded-xl border border-slate-100 dark:border-slate-700/50">
+                        <span class="font-semibold">Shtëpia që deklaruat:</span>
+                        <span class="font-black text-slate-900 dark:text-white">${initialHouseArea} m²</span>
+                    </div>
+                    <div class="flex justify-between items-center bg-slate-50 dark:bg-slate-800/50 p-3 sm:p-3.5 rounded-xl border border-slate-100 dark:border-slate-700/50">
+                        <span class="font-semibold">Dyshemeja e mbledhur nga dhomat:</span>
+                        <span class="font-black text-slate-900 dark:text-white">${tFloor.toFixed(1)} m²</span>
+                    </div>
+                    <div class="flex justify-between items-center bg-emerald-50 dark:bg-emerald-500/10 p-3 sm:p-3.5 rounded-xl text-emerald-700 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-800/30">
+                        <span class="font-semibold">Zbritjet e sakta (Dyer / Dritare):</span>
+                        <span class="font-black">-${tDed.toFixed(1)} m²</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 shadow-inner">
+                    <h6 class="font-black text-slate-800 dark:text-white uppercase tracking-widest text-[10px] sm:text-xs mb-3 flex items-center gap-2">
+                        <div class="bg-accent/20 p-1.5 rounded-md"><i data-lucide="calculator" class="w-4 h-4 text-accent"></i></div>
+                        Formula e Transparencës (Si llogarisim?)
+                    </h6>
+                    <p class="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-medium mb-4">
+                        Ne aplikojmë një model matematikor strikt për të garantuar që ju paguani <strong class="text-emerald-600 dark:text-emerald-500">vetëm për sipërfaqen reale</strong> që lyhet:
+                    </p>
+                    <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-100 dark:border-slate-800 font-mono text-[10px] sm:text-xs text-slate-700 dark:text-slate-300 mb-4 shadow-sm">
+                        <div class="mb-2"><span class="text-slate-400">1. Perimetri =</span> 2 × (Gjerësi + Gjatësi)</div>
+                        <div class="mb-2"><span class="text-slate-400">2. Bruto Mure =</span> Perimetri × Lartësi</div>
+                        <div class="mb-2"><span class="text-slate-400">3. Zbritjet =</span> (Dyer m²) + (Dritare m²)</div>
+                        <div class="font-bold text-accent border-t border-slate-100 dark:border-slate-800 pt-2 mt-2">
+                            Sipërfaqja Neto = Bruto Mure - Zbritjet
+                        </div>
+                    </div>
+                    <p class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
+                        <strong class="text-slate-700 dark:text-slate-200">Shembull praktik:</strong> Për një dhomë 4m×5m (Lartësia 2.5m), perimetri është 18m. Sipërfaqja bruto bëhet 45m² (18×2.5). Ne zbresim saktësisht hapësirat boshe (psh. 1 derë 2m² + 1 dritare 1.5m² = 3.5m²). Sipërfaqja që faturoni është <strong class="text-slate-800 dark:text-white">41.5m²</strong>. Ne nuk ju tarifojmë asnjë cent për hapësirat që nuk lyhen!
+                    </p>
+                </div>
+            `;
+
+            document.getElementById('accuracyContent').innerHTML = html;
+            lucide.createIcons();
+            const modal = document.getElementById('accuracyModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+
+            setTimeout(() => {
+                const bar = document.getElementById('animatedProgressBar');
+                if (bar) {
+                    bar.style.width = bar.getAttribute('data-target-width');
+                }
+            }, 100);
+        }
+
+        function closeAccuracyModal() {
+            const modal = document.getElementById('accuracyModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+
+        // ==========================================
+        // 7. TOUR LOGIC (DEMONSTRIMI)
+        // ==========================================
         let tourStep = 0, tourActive = false;
         const steps = [
             { 
@@ -1942,6 +1978,10 @@
             ['tourClickBlocker','tourSpotlight','tourTooltipPanel'].forEach(id => document.getElementById(id).classList.add('hidden'));
         }
 
+
+        // ==========================================
+        // 8. PRINTIMI DHE SHKARIKIMI SI FOTO
+        // ==========================================
         function downloadInvoice() {
             if (!rooms.length || editingId) return;
             const btn = document.getElementById('downloadBtn'), orig = btn.innerHTML;
